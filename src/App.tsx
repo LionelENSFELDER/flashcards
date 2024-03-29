@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { ThemeProvider, useTheme } from "@mui/material/styles";
 import contryCapitals from "./data/country-capitals.json";
 import AliceCarousel from "react-alice-carousel";
-import { Box } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import Card from "./components/card";
 import "react-alice-carousel/lib/alice-carousel.css";
-import "./App.css";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import defaultTheme from "./themes/theme-default";
+import backgroundImage from "./assets/img/background3.jpg";
 
 type singleCard = {
   question: string;
@@ -19,7 +23,7 @@ type cardsData = {
 
 function App() {
   const [cards, setCards] = useState<singleCard[]>(contryCapitals.cards);
-  const handleDragStart = (e) => e.preventDefault();
+  const handleDragStart = (e: Event) => e.preventDefault();
   const title = contryCapitals.title;
 
   const items = cards.map((card: singleCard, index: number) => (
@@ -31,19 +35,80 @@ function App() {
     />
   ));
 
+  const renderPrevNextButton = (direction: string) => {
+    if (direction === "prev") {
+      return (
+        <Button
+          variant="outlined"
+          sx={{
+            color: "text.secondary",
+            bgcolor: "secondary.main",
+            border: 4,
+            borderColor: "primary.secondary",
+            borderRadius: "10px",
+          }}
+          size="large"
+          startIcon={<NavigateBeforeIcon />}
+        >
+          Previous
+        </Button>
+      );
+    } else if (direction === "next") {
+      return (
+        <Button
+          variant="outlined"
+          sx={{
+            color: "text.secondary",
+            bgcolor: "secondary.main",
+            border: 4,
+            borderColor: "primary.secondary",
+            borderRadius: "10px",
+          }}
+          size="large"
+          endIcon={<NavigateNextIcon />}
+        >
+          Next
+        </Button>
+      );
+    }
+  };
+
   const Gallery = () => (
-    <AliceCarousel mouseTracking autoWidth autoHeight items={items} />
+    <AliceCarousel
+      mouseTracking
+      autoWidth
+      autoHeight
+      items={items}
+      renderPrevButton={() => renderPrevNextButton("prev")}
+      renderNextButton={() => renderPrevNextButton("next")}
+    />
   );
 
   return (
-    <Box
-      sx={{
-        width: "475px",
-        height: "200px",
-      }}
-    >
-      <Gallery />
-    </Box>
+    <ThemeProvider theme={defaultTheme}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: 0,
+          padding: 0,
+          width: "100vw",
+          height: "100vh",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundBlendMode: "blur",
+        }}
+      >
+        <Container
+          sx={{
+            width: 500,
+            height: 400,
+          }}
+        >
+          <Gallery />
+        </Container>
+      </Box>
+    </ThemeProvider>
   );
 }
 

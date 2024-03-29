@@ -18,17 +18,41 @@ export default function BasicCard({ title, question, answer }: singleCard) {
     setAnswerHidden(!answerHidden);
   };
   return (
-    <Card sx={{ minWidth: 475 }}>
+    <Card
+      sx={{
+        width: 380,
+        height: 400,
+        border: 4,
+        borderColor: "primary.main",
+        borderRadius: "20px",
+      }}
+    >
       <CardContent>
-        <Typography variant="h5" color="text.secondary" gutterBottom>
+        <Typography variant="h5" color="text.primary" gutterBottom>
           {title} {question} ?
         </Typography>
         <Typography variant="h4" component="div">
           {answerHidden ? "■■■■■■■■" : answer}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small" onClick={() => handleCardClick(answerHidden)}>
+      <CardActions
+        sx={{
+          position: "absolute",
+          bottom: "10%",
+        }}
+      >
+        <Button
+          variant="outlined"
+          sx={{
+            color: "text.primary",
+            bgcolor: "secondary.main",
+            border: 4,
+            borderColor: "primary.main",
+            borderRadius: "10px",
+          }}
+          size="large"
+          onClick={() => handleCardClick(answerHidden)}
+        >
           {answerHidden ? "View answer" : "Hide answer"}
         </Button>
       </CardActions>

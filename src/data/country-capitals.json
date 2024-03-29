@@ -1,7 +1,7 @@
 {
   "mode": "flash",
   "theme": "capitals",
-  "title": "What is capital of",
+  "title": "Capital of",
   "cards": [
     {
       "question": "France",
@@ -22,6 +22,50 @@
     {
       "question": "Japan",
       "answer": "Tokyo"
+    },
+    {
+      "question": "Afghanistan",
+      "answer": "Kabul"
+    },
+    {
+      "question": "China",
+      "answer": "Beijing"
+    },
+    {
+      "question": "Denmark",
+      "answer": "Copenhagen"
+    },
+    {
+      "question": "North Korea",
+      "answer": "Pyongyang"
+    },
+    {
+      "question": "Portugal",
+      "answer": "Lisbon"
+    },
+    {
+      "question": "Thailand",
+      "answer": "Bangkok"
+    },
+    {
+      "question": "Venezuela",
+      "answer": "Caracas"
+    },
+    {
+      "question": "Peru",
+      "answer": "Lima"
+    },
+    {
+      "question": "Romania",
+      "answer": "Bucharest"
+    },
+    {
+      "question": "Morocco",
+      "answer": "Rabat"
+    },
+    {
+      "question": "Libya",
+      "answer": "Tripoli"
     }
   ]
 }

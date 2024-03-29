@@ -1,0 +1,27 @@
+{
+  "mode": "flash",
+  "theme": "capitals",
+  "title": "What is capital of",
+  "cards": [
+    {
+      "question": "France",
+      "answer": "Paris"
+    },
+    {
+      "question": "Netherlands",
+      "answer": "Amsterdam"
+    },
+    {
+      "question": "United States",
+      "answer": "Washington"
+    },
+    {
+      "question": "Brazil",
+      "answer": "Brasília"
+    },
+    {
+      "question": "Japan",
+      "answer": "Tokyo"
+    }
+  ]
+}

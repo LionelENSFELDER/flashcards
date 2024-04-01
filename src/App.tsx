@@ -2,14 +2,12 @@ import { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import contryCapitals from "./data/country-capitals.json";
 import AliceCarousel from "react-alice-carousel";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Card from "./components/card";
 import "react-alice-carousel/lib/alice-carousel.css";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import defaultTheme from "./themes/theme-default";
 import backgroundImage from "./assets/img/background4.jpg";
-import SportsScoreIcon from "@mui/icons-material/SportsScore";
+import GalleryNavButtons from "./components/gallery-nav-buttons";
 
 type singleCard = {
   question: string;
@@ -38,52 +36,14 @@ function App() {
     />
   ));
 
-  const renderPrevNextButton = (direction: string) => {
-    if (direction === "prev") {
-      return (
-        <Button
-          variant="outlined"
-          sx={{
-            color: "text.secondary",
-            bgcolor: "secondary.main",
-            border: 4,
-            borderColor: "primary.secondary",
-            borderRadius: "10px",
-          }}
-          size="large"
-          startIcon={<NavigateBeforeIcon />}
-        >
-          Previous
-        </Button>
-      );
-    } else if (direction === "next") {
-      return (
-        <Button
-          variant="outlined"
-          sx={{
-            color: "text.secondary",
-            bgcolor: "secondary.main",
-            border: 4,
-            borderColor: "primary.secondary",
-            borderRadius: "10px",
-          }}
-          size="large"
-          endIcon={<NavigateNextIcon />}
-        >
-          Next
-        </Button>
-      );
-    }
-  };
-
   const Gallery = () => (
     <AliceCarousel
       mouseTracking
       autoWidth
       autoHeight
       items={items}
-      renderPrevButton={() => renderPrevNextButton("prev")}
-      renderNextButton={() => renderPrevNextButton("next")}
+      renderPrevButton={() => GalleryNavButtons("prev")}
+      renderNextButton={() => GalleryNavButtons("next")}
     />
   );
 
@@ -107,7 +67,7 @@ function App() {
           variant="h4"
           sx={{
             color: "text.primary",
-            bgcolor: "#FFDF79",
+            bgcolor: "#ffe079",
             fontWeight: "bold",
             mb: 3,
             borderRadius: "20px",
@@ -115,15 +75,9 @@ function App() {
             px: 3,
           }}
         >
-          <SportsScoreIcon fontSize="large" />
           Score : {score} / {maxScore}
         </Typography>
-        <Container
-          sx={{
-            width: 500,
-            height: 400,
-          }}
-        >
+        <Container sx={{ width: 500, height: 400 }}>
           <Gallery />
         </Container>
       </Box>

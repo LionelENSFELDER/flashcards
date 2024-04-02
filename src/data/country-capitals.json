@@ -1,7 +1,7 @@
 {
   "mode": "flash",
-  "theme": "capitals",
-  "title": "Capital of",
+  "theme": "country-capitals",
+  "themeQuestion": "Country capitals",
   "cards": [
     {
       "question": "France",
@@ -62,6 +62,10 @@
     {
       "question": "Morocco",
       "answer": "Rabat"
+    },
+    {
+      "question": "Libya",
+      "answer": "Tripoli"
     },
     {
       "question": "Libya",

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Card from "@mui/material/Card";
+// import Card from "@mui/material/Card";
+import { Box, Card } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -8,15 +9,28 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
 type singleCard = {
-  title: string;
   question: string;
   answer: string;
+  // updateScore: () => void;
 };
 
-export default function BasicCard({ title, question, answer }: singleCard) {
+export default function BasicCard({
+  question,
+  answer,
+}: // updateScore,
+singleCard) {
   const [answerHidden, setAnswerHidden] = useState<boolean>(true);
-  const handleCardClick = (answerHidden: boolean) => {
-    setAnswerHidden(!answerHidden);
+  const [learned, setLearned] = useState<boolean | null>(null);
+  const handleCardClick = (getIt: boolean) => {
+    if (learned != null) {
+      return;
+    }
+    if (getIt) {
+      setLearned(true);
+      // updateScore();
+    } else {
+      setLearned(false);
+    }
   };
   return (
     <Card
@@ -29,12 +43,32 @@ export default function BasicCard({ title, question, answer }: singleCard) {
       }}
     >
       <CardContent>
+        <Typography variant="h6" color="text.primary" gutterBottom>
+          {learned ? "You get it !" : "Keep learning !"}
+        </Typography>
         <Typography variant="h5" color="text.primary" gutterBottom>
-          {title} {question} ?
+          {question}
         </Typography>
         <Typography variant="h4" component="div">
           {answerHidden ? "■■■■■■■■" : answer}
         </Typography>
+        <Box sx={{ display: "block" }}>
+          <Button
+            variant="outlined"
+            sx={{
+              color: "text.primary",
+              bgcolor: "background.paper",
+              border: 4,
+              borderColor: "primary.main",
+              borderRadius: "10px",
+            }}
+            size="large"
+            startIcon={<ThumbDownIcon />}
+            onClick={() => setAnswerHidden(!answerHidden)}
+          >
+            {answerHidden ? "View answer" : "Hide answer"}
+          </Button>
+        </Box>
       </CardContent>
       <CardActions
         sx={{
@@ -44,6 +78,7 @@ export default function BasicCard({ title, question, answer }: singleCard) {
       >
         <Button
           variant="outlined"
+          disabled={learned !== null ? true : false}
           sx={{
             color: "text.primary",
             bgcolor: "background.paper",
@@ -53,12 +88,13 @@ export default function BasicCard({ title, question, answer }: singleCard) {
           }}
           size="large"
           startIcon={<ThumbDownIcon />}
-          onClick={() => handleCardClick(answerHidden)}
+          onClick={() => handleCardClick(false)}
         >
-          {answerHidden ? "View answer" : "Hide answer"}
+          Nope
         </Button>
         <Button
           variant="outlined"
+          disabled={learned !== null ? true : false}
           sx={{
             color: "text.primary",
             bgcolor: "secondary.main",
@@ -68,7 +104,7 @@ export default function BasicCard({ title, question, answer }: singleCard) {
           }}
           size="large"
           startIcon={<ThumbUpIcon />}
-          onClick={() => console.log("get it !")}
+          onClick={() => handleCardClick(true)}
         >
           Get it !
         </Button>

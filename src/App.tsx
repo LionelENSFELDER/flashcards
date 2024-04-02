@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import contryCapitals from "./data/country-capitals.json";
 import AliceCarousel from "react-alice-carousel";
@@ -21,18 +21,21 @@ type singleCard = {
 // };
 
 function App() {
-  const [cards, setCards] = useState<singleCard[]>(contryCapitals.cards);
-  const [score, setScore] = useState<number>(0);
+  // const [cards, setCards] = useState<singleCard[]>(contryCapitals.cards);
+  // const [score, setScore] = useState<number>(0);
+  // const addOneOnScore = () => {
+  //   setScore(score + 1);
+  // };
+  const cards: singleCard[] = contryCapitals.cards;
+  const score: number = 0;
   const maxScore: number = cards.length;
-  // const handleDragStart = (e: Event) => e.preventDefault();
-  const title = contryCapitals.title;
-
+  const themeQuestion = contryCapitals.themeQuestion;
   const items = cards.map((card: singleCard, index: number) => (
     <Card
       key={index}
-      title={title}
       question={card.question}
       answer={card.answer}
+      // updateScore={() => addOneOnScore()}
     />
   ));
 
@@ -75,7 +78,7 @@ function App() {
             px: 3,
           }}
         >
-          Score : {score} / {maxScore}
+          {themeQuestion} - Score : {score} / {maxScore}
         </Typography>
         <Container sx={{ width: 500, height: 400 }}>
           <Gallery />

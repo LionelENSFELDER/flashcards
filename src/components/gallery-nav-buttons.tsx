@@ -19,6 +19,9 @@ const NavButton = ({ iconSide, label }: NavButtonProps) => {
         border: 4,
         borderColor: "primary.secondary",
         borderRadius: "10px",
+        "&: hover": {
+          bgcolor: "secondary.main",
+        },
       }}
       size="large"
       startIcon={

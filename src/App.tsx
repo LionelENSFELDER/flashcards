@@ -1,71 +1,35 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import contryCapitals from "./data/country-capitals.json";
-import AliceCarousel from "react-alice-carousel";
-import { Box, Container, Typography } from "@mui/material";
-import Card from "./components/card";
-import "react-alice-carousel/lib/alice-carousel.css";
+import { Container, Typography } from "@mui/material";
+import FlashCard from "./components/flash-card";
+import { StateEnum, DataCardType } from "./types";
 import defaultTheme from "./themes/theme-default";
-import backgroundImage from "./assets/img/background4.jpg";
-import GalleryNavButtons from "./components/gallery-nav-buttons";
-
-type singleCard = {
-  question: string;
-  answer: string;
-};
-
-// type cardsData = {
-//   title: string;
-//   mode: string;
-//   cards: singleCard[];
-// };
+import CardStack from "./components/card-stack";
+import AppContainer from "./components/app-container";
 
 function App() {
-  // const [cards, setCards] = useState<singleCard[]>(contryCapitals.cards);
-  // const [score, setScore] = useState<number>(0);
-  // const addOneOnScore = () => {
-  //   setScore(score + 1);
-  // };
-  const cards: singleCard[] = contryCapitals.cards;
-  const score: number = 0;
+  const [score, setScore] = useState<number>(0);
+  const addOneOnScore = (point: number) => {
+    const nextScore = score + point;
+    setScore(nextScore);
+  };
+  const cards: DataCardType[] = contryCapitals.cards;
   const maxScore: number = cards.length;
   const themeQuestion = contryCapitals.themeQuestion;
-  const items = cards.map((card: singleCard, index: number) => (
-    <Card
+  const items = cards.map((card: DataCardType, index: number) => (
+    <FlashCard
       key={index}
       question={card.question}
       answer={card.answer}
-      // updateScore={() => addOneOnScore()}
+      state={StateEnum.Unviewed}
+      callback={(point: number) => addOneOnScore(point)}
     />
   ));
 
-  const Gallery = () => (
-    <AliceCarousel
-      mouseTracking
-      autoWidth
-      autoHeight
-      items={items}
-      renderPrevButton={() => GalleryNavButtons("prev")}
-      renderNextButton={() => GalleryNavButtons("next")}
-    />
-  );
-
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "start",
-          alignItems: "center",
-          margin: 0,
-          padding: 0,
-          pt: 20,
-          width: "100vw",
-          height: "100vh",
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      >
+      <AppContainer>
         <Typography
           variant="h4"
           sx={{
@@ -81,9 +45,9 @@ function App() {
           {themeQuestion} - Score : {score} / {maxScore}
         </Typography>
         <Container sx={{ width: 500, height: 400 }}>
-          <Gallery />
+          <CardStack cards={items} />
         </Container>
-      </Box>
+      </AppContainer>
     </ThemeProvider>
   );
 }

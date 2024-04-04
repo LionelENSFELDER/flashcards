@@ -1,5 +1,5 @@
 import { useState, useCallback, memo } from "react";
-import { Box, Card, Chip } from "@mui/material";
+import { Box, Card, Chip, Badge } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -8,9 +8,11 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import StyleIcon from "@mui/icons-material/Style";
+
 import { StateEnum, FlashCardType } from "../types";
 const FlashCard = memo(
-  ({ question, answer, state, callback }: FlashCardType) => {
+  ({ index, question, answer, state, callback }: FlashCardType) => {
     const [answerHidden, setAnswerHidden] = useState<boolean>(true);
     const [isLearned, setIsLearned] = useState<StateEnum>(state);
     const handleCardClick = useCallback(
@@ -37,6 +39,13 @@ const FlashCard = memo(
         }}
       >
         <CardContent sx={{ position: "relative" }}>
+          <Badge
+            badgeContent={index + 1}
+            color="secondary"
+            sx={{ position: "absolute", right: "5%" }}
+          >
+            <StyleIcon fontSize="large" />
+          </Badge>
           <Typography variant="h6" color="text.primary" gutterBottom>
             {isLearned === StateEnum.No && <Chip label="False" color="error" />}
             {isLearned === StateEnum.Yes && (
@@ -51,7 +60,7 @@ const FlashCard = memo(
             component="div"
             sx={{
               color: answerHidden ? "transparent" : "inherit",
-              textShadow: answerHidden ? "0 0 13px #000" : "none",
+              textShadow: answerHidden ? "0 0 16px rgb(0, 0, 92)" : "none",
             }}
           >
             {answer}

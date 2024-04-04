@@ -17,7 +17,7 @@ export type DataCardType = {
   answer: string;
 };
 export type CardStackType = {
-  cards: FlashCardType[];
+  cards: JSX.Element[];
 };
 // export type cardsData = {
 //   title: string;

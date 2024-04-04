@@ -6,8 +6,7 @@ import FlashCard from "./components/flash-card";
 import { StateEnum, DataCardType } from "./types";
 import defaultTheme from "./themes/theme-default";
 import CardStack from "./components/card-stack";
-import AppContainer from "./components/app-container";
-
+import "./index.css";
 function App() {
   const [score, setScore] = useState<number>(0);
   const addOneOnScore = (point: number) => {
@@ -29,7 +28,7 @@ function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <AppContainer>
+      <Container maxWidth="sm" sx={{ p: 4, pr: 5 }}>
         <Typography
           variant="h4"
           sx={{
@@ -42,12 +41,10 @@ function App() {
             px: 3,
           }}
         >
-          {themeQuestion} - Score : {score} / {maxScore}
+          {themeQuestion} - {score} / {maxScore}
         </Typography>
-        <Container sx={{ width: 500, height: 400 }}>
-          <CardStack cards={items} />
-        </Container>
-      </AppContainer>
+        <CardStack cards={items} />
+      </Container>
     </ThemeProvider>
   );
 }

@@ -19,8 +19,3 @@ export type DataCardType = {
 export type CardStackType = {
   cards: JSX.Element[];
 };
-// export type cardsData = {
-//   title: string;
-//   mode: string;
-//   cards: singleCard[];
-// };

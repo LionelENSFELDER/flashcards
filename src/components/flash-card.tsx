@@ -29,8 +29,7 @@ const FlashCard = memo(
     return (
       <Card
         sx={{
-          width: 380,
-          height: 400,
+          minHeight: 350,
           border: 4,
           borderColor: "primary.main",
           borderRadius: "20px",

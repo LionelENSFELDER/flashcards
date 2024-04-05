@@ -1,7 +1,7 @@
 {
   "mode": "flash",
-  "theme": "country-capitals",
-  "themeQuestion": "Country capitals",
+  "theme": "world-capitals",
+  "themeQuestion": "World Capitals",
   "cards": [
     {
       "question": "France",

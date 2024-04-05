@@ -1,0 +1,35 @@
+{
+  "mode": "flash",
+  "theme": "world-languages",
+  "themeQuestion": "World Languages",
+  "cards": [
+    {
+      "question": "United States",
+      "answer": "United States dollar - $"
+    },
+    {
+      "question": "United Kingdom",
+      "answer": "Sterling - £"
+    },
+    {
+      "question": "Sweden",
+      "answer": "Swedish krona - kr"
+    },
+    {
+      "question": "Morocco",
+      "answer": "Moroccan dirham - DH"
+    },
+    {
+      "question": "Korea, South",
+      "answer": "South Korean won - ₩"
+    },
+    {
+      "question": "India",
+      "answer": "Indian rupee - ₹"
+    },
+    {
+      "question": "Brazil",
+      "answer": "Brazilian real - R$"
+    }
+  ]
+}

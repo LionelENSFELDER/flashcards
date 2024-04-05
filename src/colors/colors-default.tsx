@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-const theme = createTheme({
+const colorsDefault = createTheme({
   palette: {
     common: {
       black: "#000",
@@ -29,4 +29,4 @@ const theme = createTheme({
   spacing: 8,
 });
 
-export default theme;
+export default colorsDefault;

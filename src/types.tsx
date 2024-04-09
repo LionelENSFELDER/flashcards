@@ -1,5 +1,10 @@
 import { SvgIconComponent } from "@mui/icons-material";
-
+export type ThemeType = {
+  mode: string;
+  theme: string;
+  themeQuestion: string;
+  cards: DataCardType[];
+};
 export type SimpleContainerType = {
   children: JSX.Element[];
 };

@@ -1,94 +1,50 @@
 import { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import worldCapitals from "./data/world-capitals.json";
-import worldCurrencies from "./data/world-currencies.json";
 import { Box, Container, Typography } from "@mui/material";
 import FlashCard from "./components/flash-card";
-import { StateEnum, DataCardType } from "./types";
+import { ThemeType, StateEnum, DataCardType } from "./types";
 import colorsDefault from "./colors/colors-default";
 import CardStack from "./components/card-stack";
 import SwipeIcon from "@mui/icons-material/Swipe";
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
 import NavigationTip from "./components/navigation-tip";
+import ThemeSelect from "./components/theme-select";
+import { getTheme, getThemeList } from "./theme/get-theme";
 import "./index.css";
+
 function App() {
-  const availableCardsThemes: string[] = ["world-capitals", "world-currencies"];
-  const getCardsTheme = (name: string): string | undefined => {
-    const themeIndex: number | undefined = availableCardsThemes.findIndex(
-      (element) => element === name
-    );
-    if (themeIndex !== undefined) {
-      return "./data/" + availableCardsThemes[themeIndex] + ".json";
-    }
-    return undefined;
-  };
   const [score, setScore] = useState<number>(0);
-  const addOneOnScore = (point: number) => {
-    const nextScore = score + point;
-    setScore(nextScore);
-  };
-
-  const modules = import.meta.glob("./data/*.json");
-  const ThemesList: string[] = [];
-  const getThemesList = () => {
-    for (const path in modules) {
-      modules[path]().then((mod: any) => {
-        ThemesList.push(mod.default.theme);
-      });
-    }
-  };
-  getThemesList();
-  console.log(ThemesList);
-
-  const allThemes: { name: string; cards: any }[] = [];
-  const getAllThemes = () => {
-    for (const path in modules) {
-      modules[path]().then((mod: any) => {
-        const obj: any = {};
-        obj.name = mod.default.theme;
-        obj.cards = mod.default.cards;
-        allThemes.push(obj);
-      });
-      console.log(allThemes);
-    }
-  };
-  getAllThemes();
-  console.log(allThemes.find((element) => element.name === "world-capitals"));
-  // for (const path in modules) {
-  //   modules[path]().then((mod: any) => {
-  //     cardThemeSelectList.push(mod.default.theme);
-  //     const obj: any = {};
-  //     // obj.name = mod.default.theme;
-  //     obj[mod.default.theme] = mod.default.cards;
-  //     allCardsThemes.push(obj);
-  //     // console.log(obj);
-  //   });
-  //   // console.log(allCardsThemes);
-  // }
-  // console.log(allCardsThemes[0]);
-  // const [cardsTheme, setCardsTheme] = useState<any>(
-  //   getCardsTheme("world-capitals")
-  // );
-  // console.log("cardTheme", cardsTheme);
-
-  const cards: DataCardType[] = worldCapitals.cards;
-  const maxScore: number = cards.length;
-  const themeQuestion = worldCapitals.themeQuestion;
-  const items = cards.map((card: DataCardType, index: number) => (
+  const [currentTheme, setCurrentTheme] = useState<ThemeType>(getTheme());
+  const items = currentTheme.cards.map((card: DataCardType, index: number) => (
     <FlashCard
       key={index}
       index={index}
       question={card.question}
       answer={card.answer}
       state={StateEnum.Unviewed}
-      callback={(point: number) => addOneOnScore(point)}
+      callback={(point: number) => updateScore(point)}
     />
   ));
+  const updateCurrentTheme = (name: string) => {
+    const newTheme = getTheme(name);
+    setCurrentTheme(newTheme);
+  };
+
+  const updateScore = (point: number) => {
+    const nextScore = score + point;
+    setScore(nextScore);
+  };
+  const maxScore: number = currentTheme.cards.length;
+  const themeQuestion = currentTheme.themeQuestion;
 
   return (
     <ThemeProvider theme={colorsDefault}>
       <Container maxWidth="sm" sx={{ p: 4, pr: 5 }}>
+        <ThemeSelect
+          themesList={getThemeList()}
+          callback={updateCurrentTheme}
+        />
         <Typography
           variant="h4"
           sx={{

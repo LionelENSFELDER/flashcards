@@ -18,15 +18,21 @@ const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
+    <Box sx={{ width: 1, mb: 3 }}>
+      <FormControl size="medium">
         <InputLabel id="theme-select-label">Theme</InputLabel>
         <Select
+          variant="outlined"
           labelId="theme-select-label"
           id="theme-select"
           value={theme}
-          label="Theme"
+          label="Select your theme"
           onChange={handleChange}
+          sx={{
+            color: "text.main",
+            fontWeight: "bold",
+            borderRadius: 4,
+          }}
         >
           {themesList.map((element, index) => {
             return (

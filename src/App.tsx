@@ -12,11 +12,48 @@ import NavigationTip from "./components/navigation-tip";
 import ThemeSelect from "./components/theme-select";
 import { getTheme, getThemeList } from "./theme/get-theme";
 import "./index.css";
+import MaxCardsSelect from "./components/max-cards-select";
 
 function App() {
   const [score, setScore] = useState<number>(0);
+  const [maxCards, setMaxCards] = useState<number>(10);
   const [currentTheme, setCurrentTheme] = useState<ThemeType>(getTheme());
-  const items = currentTheme.cards.map((card: DataCardType, index: number) => (
+  const randomCards: DataCardType[] = [];
+
+  const isCardExist = (card: DataCardType): boolean => {
+    let isExist = false;
+    randomCards.forEach((element) => {
+      if (element.question === card.question) {
+        isExist = true;
+      }
+    });
+    return isExist;
+  };
+
+  const selectRandomCard = () => {
+    return currentTheme.cards[
+      Math.floor(Math.random() * currentTheme.cards.length)
+    ];
+  };
+
+  const getRandomCards = () => {
+    while (
+      currentTheme.cards.length > randomCards.length &&
+      randomCards.length < maxCards
+    ) {
+      const randomCard = selectRandomCard();
+      if (!isCardExist(randomCard)) {
+        randomCards.push(randomCard);
+      }
+    }
+  };
+  getRandomCards();
+
+  const updateMaxCard = (maxCards: number) => {
+    setMaxCards(maxCards);
+  };
+
+  const items = randomCards.map((card: DataCardType, index: number) => (
     <FlashCard
       key={index}
       index={index}
@@ -35,7 +72,7 @@ function App() {
     const nextScore = score + point;
     setScore(nextScore);
   };
-  const maxScore: number = currentTheme.cards.length;
+  const maxScore: number = randomCards.length;
   const themeQuestion = currentTheme.themeQuestion;
 
   return (
@@ -45,6 +82,7 @@ function App() {
           themesList={getThemeList()}
           callback={updateCurrentTheme}
         />
+        <MaxCardsSelect callback={updateMaxCard} />
         <Typography
           variant="h4"
           sx={{

@@ -5,31 +5,47 @@
   "cards": [
     {
       "question": "United States",
-      "answer": "United States dollar - $"
-    },
-    {
-      "question": "United Kingdom",
-      "answer": "Sterling - £"
-    },
-    {
-      "question": "Sweden",
-      "answer": "Swedish krona - kr"
-    },
-    {
-      "question": "Morocco",
-      "answer": "Moroccan dirham - DH"
-    },
-    {
-      "question": "Korea, South",
-      "answer": "South Korean won - ₩"
-    },
-    {
-      "question": "India",
-      "answer": "Indian rupee - ₹"
+      "answer": "English"
     },
     {
       "question": "Brazil",
-      "answer": "Brazilian real - R$"
+      "answer": "Portuguese"
+    },
+    {
+      "question": "Cuba",
+      "answer": "Spanish"
+    },
+    {
+      "question": "Egypt",
+      "answer": "Arabic"
+    },
+    {
+      "question": "Iran",
+      "answer": "Persian"
+    },
+    {
+      "question": "Nigeria",
+      "answer": "English"
+    },
+    {
+      "question": "Senegal",
+      "answer": "French"
+    },
+    {
+      "question": "Vietnam",
+      "answer": "Vietnamese"
+    },
+    {
+      "question": "South Africa",
+      "answer": "Afrikaans, English and others"
+    },
+    {
+      "question": "Sweden",
+      "answer": "Swedish"
+    },
+    {
+      "question": "Thailand",
+      "answer": "Thai"
     }
   ]
 }

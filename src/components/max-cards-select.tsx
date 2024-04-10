@@ -6,27 +6,27 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 type ThemeSelectType = {
-  themesList: string[];
-  callback: (name: string) => void;
+  callback: (maxCards: number) => void;
 };
-const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
-  const [theme, setTheme] = useState<string>(themesList[0]);
+const MaxCardsSelect = ({ callback }: ThemeSelectType) => {
+  const availableNumbers: number[] = [10, 20, 40, 80];
+  const [maxCards, setMaxCards] = useState<number>(5);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setTheme(event.target.value);
-    callback(event.target.value);
+    setMaxCards(parseInt(event.target.value));
+    callback(parseInt(event.target.value));
   };
 
   return (
     <Box sx={{ width: 1, mb: 3 }}>
       <FormControl size="medium">
-        <InputLabel id="theme-select-label">Select your theme</InputLabel>
+        <InputLabel id="max-card-select-label">Maximum cards</InputLabel>
         <Select
           variant="outlined"
-          labelId="theme-select-label"
-          id="theme-select"
-          value={theme}
-          label="Select your theme"
+          labelId="max-cards-select-label"
+          id="max-cards-select"
+          value={maxCards.toString()}
+          label="Select max number of cards"
           onChange={handleChange}
           sx={{
             color: "text.main",
@@ -34,7 +34,7 @@ const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
             borderRadius: 4,
           }}
         >
-          {themesList.map((element, index) => {
+          {availableNumbers.map((element, index) => {
             return (
               <MenuItem key={index} value={element}>
                 {element}
@@ -47,4 +47,4 @@ const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
   );
 };
 
-export default ThemeSelect;
+export default MaxCardsSelect;

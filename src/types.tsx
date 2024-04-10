@@ -13,7 +13,9 @@ export enum StateEnum {
   No,
   Yes,
 }
+
 export type FlashCardType = {
+  mode: "text" | "image";
   question: string;
   answer: string;
   state: StateEnum;

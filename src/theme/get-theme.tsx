@@ -1,9 +1,15 @@
 import worldCapital from "../data/world-capitals.json";
 import worldCurrencies from "../data/world-currencies.json";
 import worldLanguages from "../data/world-laguages.json";
+import babyWords from "../data/baby-words.json";
 
 export const getThemeList = (): string[] => {
-  return ["world-capitals", "world-currencies", "world-languages"];
+  return [
+    "baby-words",
+    "world-capitals",
+    "world-currencies",
+    "world-languages",
+  ];
 };
 export const getTheme = (name?: string) => {
   switch (name) {
@@ -16,8 +22,11 @@ export const getTheme = (name?: string) => {
     case "world-languages":
       return worldLanguages;
       break;
+    case "baby-words":
+      return babyWords;
+      break;
     default:
-      return worldCapital;
+      return babyWords;
       break;
   }
 };

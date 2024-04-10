@@ -53,8 +53,10 @@ function App() {
     setMaxCards(maxCards);
   };
 
+  const mode: any = currentTheme.mode;
   const items = randomCards.map((card: DataCardType, index: number) => (
     <FlashCard
+      mode={mode}
       key={index}
       index={index}
       question={card.question}
@@ -78,11 +80,13 @@ function App() {
   return (
     <ThemeProvider theme={colorsDefault}>
       <Container maxWidth="sm" sx={{ p: 4, pr: 5 }}>
-        <ThemeSelect
-          themesList={getThemeList()}
-          callback={updateCurrentTheme}
-        />
-        <MaxCardsSelect callback={updateMaxCard} />
+        <Box sx={{ display: "flex", flexDirection: "row" }}>
+          <ThemeSelect
+            themesList={getThemeList()}
+            callback={updateCurrentTheme}
+          />
+          <MaxCardsSelect callback={updateMaxCard} />
+        </Box>
         <Typography
           variant="h4"
           sx={{

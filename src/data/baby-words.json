@@ -1,0 +1,31 @@
+{
+  "mode": "image",
+  "theme": "baby-words",
+  "themeQuestion": "Baby Words",
+  "cards": [
+    {
+      "question": "https://placehold.co/600x400?text=Cuisine",
+      "answer": "Cuisine"
+    },
+    {
+      "question": "https://placehold.co/600x400?text=Salle de bain",
+      "answer": "Salle de bain"
+    },
+    {
+      "question": "https://placehold.co/600x400?text=Chambre",
+      "answer": "Chambre"
+    },
+    {
+      "question": "https://placehold.co/600x400?text=Salon",
+      "answer": "Salon"
+    },
+    {
+      "question": "https://placehold.co/600x400?text=Toilette",
+      "answer": "Toilette"
+    },
+    {
+      "question": "https://placehold.co/600x400?text=Chambre de Liam",
+      "answer": "Chambre de Liam"
+    }
+  ]
+}

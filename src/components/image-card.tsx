@@ -12,7 +12,7 @@ import StyleIcon from "@mui/icons-material/Style";
 
 import { StateEnum, FlashCardType } from "../types";
 const FlashCard = memo(
-  ({ mode, index, question, answer, state, callback }: FlashCardType) => {
+  ({ index, question, answer, state, callback }: FlashCardType) => {
     const [answerHidden, setAnswerHidden] = useState<boolean>(true);
     const [isLearned, setIsLearned] = useState<StateEnum>(state);
     const handleCardClick = useCallback(
@@ -46,33 +46,13 @@ const FlashCard = memo(
           >
             <StyleIcon fontSize="large" />
           </Badge>
-          <Typography
-            variant="h6"
-            color="text.primary"
-            gutterBottom
-            sx={{
-              visibility:
-                isLearned === StateEnum.Unviewed ? "hidden" : "visible",
-            }}
-          >
-            <Chip
-              label={isLearned === StateEnum.No ? "False" : "True !"}
-              color={isLearned === StateEnum.No ? "error" : "success"}
-            />
+          <Typography variant="h6" color="text.primary" gutterBottom>
+            {isLearned === StateEnum.No && <Chip label="False" color="error" />}
+            {isLearned === StateEnum.Yes && (
+              <Chip label="True !" color="success" />
+            )}
           </Typography>
-          {mode === "image" && (
-            <Box
-              component={"img"}
-              src={question}
-              alt={question + " image"}
-              sx={{ width: 1, height: "auto" }}
-            />
-          )}
-          {mode === "text" && (
-            <Typography variant="h5" color="text.primary" gutterBottom>
-              {question}
-            </Typography>
-          )}
+          <Box component={"img"} src={question} />
           <Typography
             variant="h4"
             component="div"

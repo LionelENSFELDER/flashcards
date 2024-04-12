@@ -9,8 +9,68 @@ import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import StyleIcon from "@mui/icons-material/Style";
-
 import { StateEnum, FlashCardType } from "../types";
+
+type CardButtonProps = {
+  answerHidden?: boolean;
+  disabled?: boolean;
+  handleClick: (answerHidden: boolean) => void;
+  startIcon: React.ReactNode;
+  label: string;
+  bgcolor?: string;
+  mt?: number;
+};
+const CardButton = ({
+  answerHidden,
+  disabled,
+  handleClick,
+  startIcon,
+  label,
+  bgcolor,
+  mt = 4,
+}: CardButtonProps) => {
+  return (
+    <Button
+      disabled={disabled ? disabled : false}
+      variant="outlined"
+      sx={{
+        mt: mt,
+        color: "text.primary",
+        bgcolor: bgcolor ? bgcolor : "background.paper",
+        border: 4,
+        borderColor: "primary.main",
+        borderRadius: "10px",
+      }}
+      size="large"
+      startIcon={startIcon}
+      onClick={() => handleClick(!answerHidden)}
+    >
+      {label}
+    </Button>
+  );
+};
+
+type QuestionFormaterProps = {
+  mode: FlashCardType["mode"];
+  question: string;
+};
+const QuestionFormater = ({ mode, question }: QuestionFormaterProps) => {
+  if (mode === "image") {
+    return (
+      <Box
+        component={"img"}
+        src={question}
+        alt={question + " image"}
+        sx={{ position: "relative", width: 1, height: "auto" }}
+      />
+    );
+  }
+  return (
+    <Typography variant="h5" color="text.primary" gutterBottom>
+      {question}
+    </Typography>
+  );
+};
 const FlashCard = memo(
   ({ mode, index, question, answer, state, callback }: FlashCardType) => {
     const [answerHidden, setAnswerHidden] = useState<boolean>(true);
@@ -60,19 +120,7 @@ const FlashCard = memo(
               color={isLearned === StateEnum.No ? "error" : "success"}
             />
           </Typography>
-          {mode === "image" && (
-            <Box
-              component={"img"}
-              src={question}
-              alt={question + " image"}
-              sx={{ width: 1, height: "auto" }}
-            />
-          )}
-          {mode === "text" && (
-            <Typography variant="h5" color="text.primary" gutterBottom>
-              {question}
-            </Typography>
-          )}
+          <QuestionFormater mode={mode} question={question} />
           <Typography
             variant="h4"
             component="div"
@@ -83,65 +131,35 @@ const FlashCard = memo(
           >
             {answer}
           </Typography>
-          <Box sx={{ display: "block" }}>
-            <Button
-              variant="outlined"
-              sx={{
-                mt: 4,
-                color: "text.primary",
-                bgcolor: "background.paper",
-                border: 4,
-                borderColor: "primary.main",
-                borderRadius: "10px",
-              }}
-              size="large"
+          <Box sx={{ display: "block", position: "relative" }}>
+            <CardButton
+              answerHidden={answerHidden}
+              handleClick={() => setAnswerHidden(!answerHidden)}
               startIcon={
                 answerHidden ? <VisibilityIcon /> : <VisibilityOffIcon />
               }
-              onClick={() => setAnswerHidden(!answerHidden)}
-            >
-              {answerHidden ? "View answer" : "Hide answer"}
-            </Button>
+              label={answerHidden ? "View answer" : "Hide answer"}
+            />
           </Box>
         </CardContent>
-        <CardActions
-          sx={{
-            position: "absolute",
-            bottom: "10%",
-          }}
-        >
-          <Button
-            variant="outlined"
+        <CardActions>
+          <CardButton
             disabled={isLearned !== StateEnum.Unviewed ? true : false}
-            sx={{
-              color: "text.primary",
-              bgcolor: "background.paper",
-              border: 4,
-              borderColor: "primary.main",
-              borderRadius: "10px",
-            }}
-            size="large"
+            handleClick={() => handleCardClick(StateEnum.No)}
             startIcon={<ThumbDownIcon />}
-            onClick={() => handleCardClick(StateEnum.No)}
-          >
-            Nope
-          </Button>
-          <Button
-            variant="outlined"
+            label={"None"}
+            mt={1}
+          />
+
+          <CardButton
+            // sx={{bdcolor: "secondary.main"}}
             disabled={isLearned !== StateEnum.Unviewed ? true : false}
-            sx={{
-              color: "text.primary",
-              bgcolor: "secondary.main",
-              border: 4,
-              borderColor: "primary.main",
-              borderRadius: "10px",
-            }}
-            size="large"
+            handleClick={() => handleCardClick(StateEnum.Yes)}
             startIcon={<ThumbUpIcon />}
-            onClick={() => handleCardClick(StateEnum.Yes)}
-          >
-            Get it !
-          </Button>
+            label={"Get it !"}
+            bgcolor="secondary.main"
+            mt={1}
+          />
         </CardActions>
       </Card>
     );

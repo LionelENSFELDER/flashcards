@@ -1,32 +1,27 @@
-import worldCapital from "../data/world-capitals.json";
-import worldCurrencies from "../data/world-currencies.json";
-import worldLanguages from "../data/world-laguages.json";
-import babyWords from "../data/baby-words.json";
-
+import capitals from "../data/capitals.json";
+import currencies from "../data/currencies.json";
+import languages from "../data/laguages.json";
+import baby from "../data/baby.json";
+import { ThemeType } from "../types";
 export const getThemeList = (): string[] => {
-  return [
-    "baby-words",
-    "world-capitals",
-    "world-currencies",
-    "world-languages",
-  ];
+  return ["Baby", "Capitals", "Currencies", "Languages"];
 };
-export const getTheme = (name?: string) => {
+export const getTheme = (name?: string): ThemeType => {
   switch (name) {
-    case "world-capitals":
-      return worldCapital;
+    case "Capitals":
+      return capitals;
       break;
-    case "world-currencies":
-      return worldCurrencies;
+    case "Currencies":
+      return currencies;
       break;
-    case "world-languages":
-      return worldLanguages;
+    case "Languages":
+      return languages;
       break;
-    case "baby-words":
-      return babyWords;
+    case "Baby":
+      return baby;
       break;
     default:
-      return babyWords;
+      return baby;
       break;
   }
 };

@@ -1,4 +1,13 @@
 import { SvgIconComponent } from "@mui/icons-material";
+export type ModeType = "text" | "image";
+export type ThemeNameType =
+  | "Capitals"
+  | "Currencies"
+  | "Languages"
+  | "Babywords"
+  | "Actors"
+  | "Javascript";
+
 export type ThemeType = {
   mode: string;
   theme: string;
@@ -13,9 +22,8 @@ export enum StateEnum {
   No,
   Yes,
 }
-
 export type FlashCardType = {
-  mode: "text" | "image";
+  mode: string;
   question: string;
   answer: string;
   state: StateEnum;

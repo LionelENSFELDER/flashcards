@@ -9,7 +9,7 @@ import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import StyleIcon from "@mui/icons-material/Style";
-import { StateEnum, FlashCardType } from "../types";
+import { StateEnum, FlashCardType, ThemeType } from "../types";
 
 type CardButtonProps = {
   answerHidden?: boolean;
@@ -51,7 +51,7 @@ const CardButton = ({
 };
 
 type QuestionFormaterProps = {
-  mode: FlashCardType["mode"];
+  mode: ThemeType["mode"];
   question: string;
 };
 const QuestionFormater = ({ mode, question }: QuestionFormaterProps) => {

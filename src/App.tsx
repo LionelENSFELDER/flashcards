@@ -53,7 +53,7 @@ function App() {
     setMaxCards(maxCards);
   };
 
-  const mode: any = currentTheme.mode;
+  const mode: string = currentTheme.mode;
   const items = randomCards.map((card: DataCardType, index: number) => (
     <FlashCard
       mode={mode}
@@ -66,7 +66,7 @@ function App() {
     />
   ));
   const updateCurrentTheme = (name: string) => {
-    const newTheme = getTheme(name);
+    const newTheme: ThemeType = getTheme(name);
     setCurrentTheme(newTheme);
   };
 
@@ -80,7 +80,7 @@ function App() {
   return (
     <ThemeProvider theme={colorsDefault}>
       <Container maxWidth="sm" sx={{ p: 4, pr: 5 }}>
-        <Box sx={{ display: "flex", flexDirection: "row" }}>
+        <Box sx={{ display: "flex", flexDirection: "row", mb: 3 }}>
           <ThemeSelect
             themesList={getThemeList()}
             callback={updateCurrentTheme}

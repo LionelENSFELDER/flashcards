@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -18,32 +17,30 @@ const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
   };
 
   return (
-    <Box sx={{ width: 1, mb: 3 }}>
-      <FormControl size="medium">
-        <InputLabel id="theme-select-label">Select your theme</InputLabel>
-        <Select
-          variant="outlined"
-          labelId="theme-select-label"
-          id="theme-select"
-          value={theme}
-          label="Select your theme"
-          onChange={handleChange}
-          sx={{
-            color: "text.main",
-            fontWeight: "bold",
-            borderRadius: 4,
-          }}
-        >
-          {themesList.map((element, index) => {
-            return (
-              <MenuItem key={index} value={element}>
-                {element}
-              </MenuItem>
-            );
-          })}
-        </Select>
-      </FormControl>
-    </Box>
+    <FormControl size="medium" sx={{ minWidth: 300, mr: 4 }}>
+      <InputLabel id="theme-select-label">Theme</InputLabel>
+      <Select
+        variant="outlined"
+        labelId="theme-select-label"
+        id="theme-select"
+        value={theme}
+        label="Select your theme"
+        onChange={handleChange}
+        sx={{
+          color: "text.main",
+          fontWeight: "bold",
+          borderRadius: 4,
+        }}
+      >
+        {themesList.map((element, index) => {
+          return (
+            <MenuItem key={index} value={element}>
+              {element}
+            </MenuItem>
+          );
+        })}
+      </Select>
+    </FormControl>
   );
 };
 

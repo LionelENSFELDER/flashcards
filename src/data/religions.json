@@ -1,0 +1,967 @@
+{
+  "mode": "text",
+  "theme": "religions",
+  "themeQuestion": "Religions",
+  "cards": [
+    {
+      "question": "Afghanistan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Albania",
+      "answer": "Islam"
+    },
+    {
+      "question": "Algeria",
+      "answer": "Islam"
+    },
+    {
+      "question": "American Samoa",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Andorra",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Angola",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Anguilla",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Antigua and Barbuda",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Argentina",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Armenia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Aruba",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Asia-Pacific",
+      "answer": "Hinduism"
+    },
+    {
+      "question": "Australia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Austria",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Azerbaijan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Bahamas",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Bahrain",
+      "answer": "Islam"
+    },
+    {
+      "question": "Bangladesh",
+      "answer": "Islam"
+    },
+    {
+      "question": "Barbados",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Belarus",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Belgium",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Belize",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Benin",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Bermuda",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Bhutan",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Bolivia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Bosnia and Herzegovina",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Botswana",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Brazil",
+      "answer": "Christianity"
+    },
+    {
+      "question": "British Virgin Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Brunei",
+      "answer": "Islam"
+    },
+    {
+      "question": "Bulgaria",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Burkina Faso",
+      "answer": "Islam"
+    },
+    {
+      "question": "Burundi",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cambodia",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Cameroon",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Canada",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cape Verde",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Caribbean Netherlands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cayman Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Central African Republic",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Chad",
+      "answer": "Islam"
+    },
+    {
+      "question": "Channel Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Chile",
+      "answer": "Christianity"
+    },
+    {
+      "question": "China",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "Colombia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Comoros",
+      "answer": "Islam"
+    },
+    {
+      "question": "Congo",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cook Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Costa Rica",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cote d'Ivoire",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Croatia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cuba",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Curacao",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Cyprus",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Czech Republic",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "Democratic Republic of Congo",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Denmark",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Djibouti",
+      "answer": "Islam"
+    },
+    {
+      "question": "Dominica",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Dominican Republic",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Ecuador",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Egypt",
+      "answer": "Islam"
+    },
+    {
+      "question": "El Salvador",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Equatorial Guinea",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Eritrea",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Estonia",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "Ethiopia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Europe",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Faeroe Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Falkland Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Fiji",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Finland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "France",
+      "answer": "Christianity"
+    },
+    {
+      "question": "French Guiana",
+      "answer": "Christianity"
+    },
+    {
+      "question": "French Polynesia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Gabon",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Gambia",
+      "answer": "Islam"
+    },
+    {
+      "question": "Georgia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Germany",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Ghana",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Gibraltar",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Greece",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Greenland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Grenada",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Guadeloupe",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Guam",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Guatemala",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Guinea",
+      "answer": "Islam"
+    },
+    {
+      "question": "Guinea-Bissau",
+      "answer": "Islam"
+    },
+    {
+      "question": "Guyana",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Haiti",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Honduras",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Hong Kong",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "Hungary",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Iceland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "India",
+      "answer": "Hinduism"
+    },
+    {
+      "question": "Indonesia",
+      "answer": "Islam"
+    },
+    {
+      "question": "Iran",
+      "answer": "Islam"
+    },
+    {
+      "question": "Iraq",
+      "answer": "Islam"
+    },
+    {
+      "question": "Ireland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Isle of Man",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Israel",
+      "answer": "Judaism"
+    },
+    {
+      "question": "Italy",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Jamaica",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Japan",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "Jordan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Kazakhstan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Kenya",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Kiribati",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Kosovo",
+      "answer": "Islam"
+    },
+    {
+      "question": "Kuwait",
+      "answer": "Islam"
+    },
+    {
+      "question": "Kyrgyzstan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Laos",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Latin America-Caribbean",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Latvia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Lebanon",
+      "answer": "Islam"
+    },
+    {
+      "question": "Lesotho",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Liberia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Libya",
+      "answer": "Islam"
+    },
+    {
+      "question": "Liechtenstein",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Lithuania",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Luxembourg",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Macao",
+      "answer": "Folk Religions"
+    },
+    {
+      "question": "Macedonia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Madagascar",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Malawi",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Malaysia",
+      "answer": "Islam"
+    },
+    {
+      "question": "Maldives",
+      "answer": "Islam"
+    },
+    {
+      "question": "Mali",
+      "answer": "Islam"
+    },
+    {
+      "question": "Malta",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Marshall Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Martinique",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Mauritania",
+      "answer": "Islam"
+    },
+    {
+      "question": "Mauritius",
+      "answer": "Hinduism"
+    },
+    {
+      "question": "Mayotte",
+      "answer": "Islam"
+    },
+    {
+      "question": "Mexico",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Micronesia (question)",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Middle East-North Africa",
+      "answer": "Islam"
+    },
+    {
+      "question": "Moldova",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Monaco",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Mongolia",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Montenegro",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Montserrat",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Morocco",
+      "answer": "Islam"
+    },
+    {
+      "question": "Mozambique",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Myanmar",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Namibia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Nauru",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Nepal",
+      "answer": "Hinduism"
+    },
+    {
+      "question": "Netherlands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "New Caledonia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "New Zealand",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Nicaragua",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Niger",
+      "answer": "Islam"
+    },
+    {
+      "question": "Nigeria",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Niue",
+      "answer": "Christianity"
+    },
+    {
+      "question": "North America",
+      "answer": "Christianity"
+    },
+    {
+      "question": "North Korea",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "Northern Mariana Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Norway",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Oman",
+      "answer": "Islam"
+    },
+    {
+      "question": "Pakistan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Palau",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Palestine",
+      "answer": "Islam"
+    },
+    {
+      "question": "Panama",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Papua New Guinea",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Paraguay",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Peru",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Philippines",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Poland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Portugal",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Puerto Rico",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Qatar",
+      "answer": "Islam"
+    },
+    {
+      "question": "Reunion",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Romania",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Russia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Rwanda",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Saint Helena",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Saint Kitts and Nevis",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Saint Lucia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Saint Pierre and Miquelon",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Saint Vincent and the Grenadines",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Samoa",
+      "answer": "Christianity"
+    },
+    {
+      "question": "San Marino",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Sao Tome and Principe",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Saudi Arabia",
+      "answer": "Islam"
+    },
+    {
+      "question": "Senegal",
+      "answer": "Islam"
+    },
+    {
+      "question": "Serbia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Seychelles",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Sierra Leone",
+      "answer": "Islam"
+    },
+    {
+      "question": "Singapore",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Sint Maarten (Dutch part)",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Slovakia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Slovenia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Solomon Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Somalia",
+      "answer": "Islam"
+    },
+    {
+      "question": "South Africa",
+      "answer": "Christianity"
+    },
+    {
+      "question": "South Korea",
+      "answer": "Unaffiliated Religions"
+    },
+    {
+      "question": "South Sudan",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Spain",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Sri Lanka",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Sub-Saharan Africa",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Sudan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Suriname",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Swaziland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Sweden",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Switzerland",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Syria",
+      "answer": "Islam"
+    },
+    {
+      "question": "Taiwan",
+      "answer": "Folk Religions"
+    },
+    {
+      "question": "Tajikistan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Tanzania",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Thailand",
+      "answer": "Buddhism"
+    },
+    {
+      "question": "Timor",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Togo",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Tokelau",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Tonga",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Trinidad and Tobago",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Tunisia",
+      "answer": "Islam"
+    },
+    {
+      "question": "Turkey",
+      "answer": "Islam"
+    },
+    {
+      "question": "Turkmenistan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Turks and Caicos Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Tuvalu",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Uganda",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Ukraine",
+      "answer": "Christianity"
+    },
+    {
+      "question": "United Arab Emirates",
+      "answer": "Islam"
+    },
+    {
+      "question": "United Kingdom",
+      "answer": "Christianity"
+    },
+    {
+      "question": "United States",
+      "answer": "Christianity"
+    },
+    {
+      "question": "United States Virgin Islands",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Uruguay",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Uzbekistan",
+      "answer": "Islam"
+    },
+    {
+      "question": "Vanuatu",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Vatican",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Venezuela",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Vietnam",
+      "answer": "Folk Religions"
+    },
+    {
+      "question": "Wallis and Futuna",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Western Sahara",
+      "answer": "Islam"
+    },
+    {
+      "question": "Yemen",
+      "answer": "Islam"
+    },
+    {
+      "question": "Zambia",
+      "answer": "Christianity"
+    },
+    {
+      "question": "Zimbabwe",
+      "answer": "Christianity"
+    }
+  ]
+}

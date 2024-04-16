@@ -1,979 +1,983 @@
 {
   "mode": "text",
-  "theme": "Currencies",
-  "themeQuestion": "World Currencies",
+  "theme": "continents",
+  "themeQuestion": "Wich answer",
   "cards": [
     {
       "question": "Afghanistan",
-      "answer": "Afghanistan Afghani"
+      "answer": "Asia"
     },
     {
       "question": "Albania",
-      "answer": "Albanian Lek"
+      "answer": "Europe"
     },
     {
       "question": "Algeria",
-      "answer": "Algerian Dinar"
+      "answer": "Africa"
     },
     {
       "question": "American Samoa",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Andorra",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Angola",
-      "answer": "Angolan Kwanza"
+      "answer": "Africa"
     },
     {
       "question": "Anguilla",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Antarctica",
-      "answer": "East Caribbean Dollar"
+      "answer": "Antarctica"
     },
     {
       "question": "Antigua and Barbuda",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Argentina",
-      "answer": "Argentine Peso"
+      "answer": "South America"
     },
     {
       "question": "Armenia",
-      "answer": "Armenian Dram"
+      "answer": "Asia"
     },
     {
       "question": "Aruba",
-      "answer": "Aruban Guilder"
+      "answer": "North America"
     },
     {
       "question": "Australia",
-      "answer": "Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Austria",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Azerbaijan",
-      "answer": "Azerbaijan New Manat"
+      "answer": "Asia"
     },
     {
       "question": "Bahamas",
-      "answer": "Bahamian Dollar"
+      "answer": "North America"
     },
     {
       "question": "Bahrain",
-      "answer": "Bahraini Dinar"
+      "answer": "Asia"
     },
     {
       "question": "Bangladesh",
-      "answer": "Bangladeshi Taka"
+      "answer": "Asia"
     },
     {
       "question": "Barbados",
-      "answer": "Barbados Dollar"
+      "answer": "North America"
     },
     {
       "question": "Belarus",
-      "answer": "Belarussian Ruble"
+      "answer": "Europe"
     },
     {
       "question": "Belgium",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Belize",
-      "answer": "Belize Dollar"
+      "answer": "North America"
     },
     {
       "question": "Benin",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Bermuda",
-      "answer": "Bermudian Dollar"
+      "answer": "North America"
     },
     {
       "question": "Bhutan",
-      "answer": "Bhutan Ngultrum"
+      "answer": "Asia"
     },
     {
       "question": "Bolivia",
-      "answer": "Boliviano"
+      "answer": "South America"
     },
     {
       "question": "Bosnia and Herzegovina",
-      "answer": "Convertible Mark"
+      "answer": "Europe"
     },
     {
       "question": "Botswana",
-      "answer": "Botswana Pula"
+      "answer": "Africa"
     },
     {
       "question": "Bouvet Island",
-      "answer": "Norwegian Krone"
+      "answer": "Antarctica"
     },
     {
       "question": "Brazil",
-      "answer": "Brazilian Real"
+      "answer": "South America"
     },
     {
       "question": "British Indian Ocean Territory",
-      "answer": "US Dollar"
+      "answer": "Africa"
     },
     {
       "question": "Brunei",
-      "answer": "Brunei Dollar"
+      "answer": "Asia"
     },
     {
       "question": "Bulgaria",
-      "answer": "Bulgarian Lev"
+      "answer": "Europe"
     },
     {
       "question": "Burkina Faso",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Burundi",
-      "answer": "Burundi Franc"
+      "answer": "Africa"
     },
     {
       "question": "Cambodia",
-      "answer": "Kampuchean Riel"
+      "answer": "Asia"
     },
     {
       "question": "Cameroon",
-      "answer": "CFA Franc BEAC"
+      "answer": "Africa"
     },
     {
       "question": "Canada",
-      "answer": "Canadian Dollar"
+      "answer": "North America"
     },
     {
       "question": "Cape Verde",
-      "answer": "Cape Verde Escudo"
+      "answer": "Africa"
     },
     {
       "question": "Cayman Islands",
-      "answer": "Cayman Islands Dollar"
+      "answer": "North America"
     },
     {
       "question": "Central African Republic",
-      "answer": "CFA Franc BEAC"
+      "answer": "Africa"
     },
     {
       "question": "Chad",
-      "answer": "Central African"
+      "answer": "Africa"
     },
     {
       "question": "Chile",
-      "answer": "Chilean Peso"
+      "answer": "South America"
     },
     {
       "question": "China",
-      "answer": "Yuan Renminbi"
+      "answer": "Asia"
     },
     {
       "question": "Christmas Island",
-      "answer": "Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Cocos (Keeling) Islands",
-      "answer": " Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Colombia",
-      "answer": "Colombian Peso"
+      "answer": "South America"
     },
     {
       "question": "Comoros",
-      "answer": "Comoros Franc"
+      "answer": "Africa"
     },
     {
       "question": "Congo",
-      "answer": "CFA Franc BEAC"
+      "answer": "Africa"
     },
     {
       "question": "Cook Islands",
-      "answer": "New Zealand Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Costa Rica",
-      "answer": "Costa Rican Colon"
+      "answer": "North America"
     },
     {
       "question": "Croatia",
-      "answer": "Croatian Kuna"
+      "answer": "Europe"
     },
     {
       "question": "Cuba",
-      "answer": "Cuban Peso"
+      "answer": "North America"
     },
     {
       "question": "Cyprus",
-      "answer": "Euro"
+      "answer": "Asia"
     },
     {
       "question": "Czech Republic",
-      "answer": "Czech Koruna"
+      "answer": "Europe"
     },
     {
       "question": "Denmark",
-      "answer": "Danish Krone"
+      "answer": "Europe"
     },
     {
       "question": "Djibouti",
-      "answer": "Djibouti Franc"
+      "answer": "Africa"
     },
     {
       "question": "Dominica",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Dominican Republic",
-      "answer": "Dominican Peso"
+      "answer": "North America"
     },
     {
       "question": "East Timor",
-      "answer": "US Dollar"
+      "answer": "Asia"
     },
     {
       "question": "Ecuador",
-      "answer": "Ecuador Sucre"
+      "answer": "South America"
     },
     {
       "question": "Egypt",
-      "answer": "Egyptian Pound"
+      "answer": "Africa"
     },
     {
       "question": "El Salvador",
-      "answer": "El Salvador Colon"
+      "answer": "North America"
     },
     {
       "question": "England",
-      "answer": "Pound Sterlin"
+      "answer": "Europe"
     },
     {
       "question": "Equatorial Guinea",
-      "answer": "CFA Franc BEAC"
+      "answer": "Africa"
     },
     {
       "question": "Eritrea",
-      "answer": "Eritrean Nakfa"
+      "answer": "Africa"
     },
     {
       "question": "Estonia",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Ethiopia",
-      "answer": "Ethiopian Birr"
+      "answer": "Africa"
     },
     {
       "question": "Falkland Islands",
-      "answer": "Falkland Islands Pound"
+      "answer": "South America"
     },
     {
       "question": "Faroe Islands",
-      "answer": " Danish Krone"
+      "answer": "Europe"
     },
     {
       "question": "Fiji Islands",
-      "answer": "Fijian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Finland",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "France",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "French Guiana",
-      "answer": "Euro"
+      "answer": "South America"
     },
     {
       "question": "French Polynesia",
-      "answer": "CFP Franc"
+      "answer": "Oceania"
     },
     {
       "question": "French Southern territories",
-      "answer": "Euro"
+      "answer": "Antarctica"
     },
     {
       "question": "Gabon",
-      "answer": "CFA Franc BEAC"
+      "answer": "Africa"
     },
     {
       "question": "Gambia",
-      "answer": "Gambian Dalasi"
+      "answer": "Africa"
     },
     {
       "question": "Georgia",
-      "answer": "Georgian Lari"
+      "answer": "Asia"
     },
     {
       "question": "Germany",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Ghana",
-      "answer": "Ghanaian Cedi"
+      "answer": "Africa"
     },
     {
       "question": "Gibraltar",
-      "answer": "Gibraltar Pound"
+      "answer": "Europe"
     },
     {
       "question": "Greece",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Greenland",
-      "answer": "Danish Krone"
+      "answer": "North America"
     },
     {
       "question": "Grenada",
-      "answer": "East Carribean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Guadeloupe",
-      "answer": "Euro"
+      "answer": "North America"
     },
     {
       "question": "Guam",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Guatemala",
-      "answer": "Guatemalan Quetzal"
+      "answer": "North America"
     },
     {
       "question": "Guinea",
-      "answer": "Guinea Franc"
+      "answer": "Africa"
     },
     {
       "question": "Guinea-Bissau",
-      "answer": "West African CFA franc"
+      "answer": "Africa"
     },
     {
       "question": "Guyana",
-      "answer": "Guyana Dollar"
+      "answer": "South America"
     },
     {
       "question": "Haiti",
-      "answer": "Haitian Gourde"
+      "answer": "North America"
     },
     {
       "question": "Heard Island and McDonald Islands",
-      "answer": "Australian Dollar"
+      "answer": "Antarctica"
     },
     {
       "question": "Holy See (Vatican City State)",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Honduras",
-      "answer": "Honduran Lempira"
+      "answer": "North America"
     },
     {
       "question": "Hong Kong",
-      "answer": "Hong Kong Dollar"
+      "answer": "Asia"
     },
     {
       "question": "Hungary",
-      "answer": "Hungarian Forint"
+      "answer": "Europe"
     },
     {
       "question": "Iceland",
-      "answer": "Iceland Krona"
+      "answer": "Europe"
     },
     {
       "question": "India",
-      "answer": "Indian Rupee"
+      "answer": "Asia"
     },
     {
       "question": "Indonesia",
-      "answer": "Indonesian Rupiah"
+      "answer": "Asia"
     },
     {
       "question": "Iran",
-      "answer": "Iranian Rial"
+      "answer": "Asia"
     },
     {
       "question": "Iraq",
-      "answer": "Iraqi Dinar"
+      "answer": "Asia"
     },
     {
       "question": "Ireland",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Israel",
-      "answer": "Israeli New Shekel"
+      "answer": "Asia"
     },
     {
       "question": "Italy",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Ivory Coast",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Jamaica",
-      "answer": "Jamaican Dollar"
+      "answer": "North America"
     },
     {
       "question": "Japan",
-      "answer": "Japanese Yen"
+      "answer": "Asia"
     },
     {
       "question": "Jordan",
-      "answer": "Jordanian Dinar"
+      "answer": "Asia"
     },
     {
       "question": "Kazakhstan",
-      "answer": "Tenge"
+      "answer": "Asia"
     },
     {
       "question": "Kenya",
-      "answer": "Kenyan Shilling"
+      "answer": "Africa"
     },
     {
       "question": "Kiribati",
-      "answer": "Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Kuwait",
-      "answer": "Kuwaiti Dinar"
+      "answer": "Asia"
     },
     {
       "question": "Kyrgyzstan",
-      "answer": "Som"
+      "answer": "Asia"
     },
     {
       "question": "Laos",
-      "answer": "Lao Kip"
+      "answer": "Asia"
     },
     {
       "question": "Latvia",
-      "answer": "Latvian Lats"
+      "answer": "Europe"
     },
     {
       "question": "Lebanon",
-      "answer": "Lebanese Pound"
+      "answer": "Asia"
     },
     {
       "question": "Lesotho",
-      "answer": "Lesotho Loti"
+      "answer": "Africa"
     },
     {
       "question": "Liberia",
-      "answer": "Liberian Dollar"
+      "answer": "Africa"
     },
     {
       "question": "Libyan Arab Jamahiriya",
-      "answer": "Libyan Dinar"
+      "answer": "Africa"
     },
     {
       "question": "Liechtenstein",
-      "answer": "Swiss Franc"
+      "answer": "Europe"
     },
     {
       "question": "Lithuania",
-      "answer": "Lithuanian Litas"
+      "answer": "Europe"
     },
     {
       "question": "Luxembourg",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
-      "question": "Macau",
-      "answer": "Macanese Pataca"
+      "question": "Macao",
+      "answer": "Asia"
     },
     {
       "question": "North Macedonia",
-      "answer": "Denar"
+      "answer": "Europe"
     },
     {
       "question": "Madagascar",
-      "answer": "Malagasy Franc"
+      "answer": "Africa"
     },
     {
       "question": "Malawi",
-      "answer": "Malawi Kwacha"
+      "answer": "Africa"
     },
     {
       "question": "Malaysia",
-      "answer": "Malaysian Ringgit"
+      "answer": "Asia"
     },
     {
       "question": "Maldives",
-      "answer": "Maldive Rufiyaa"
+      "answer": "Asia"
     },
     {
       "question": "Mali",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Malta",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Marshall Islands",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Martinique",
-      "answer": "Euro"
+      "answer": "North America"
     },
     {
       "question": "Mauritania",
-      "answer": "Mauritanian Ouguiya"
+      "answer": "Africa"
     },
     {
       "question": "Mauritius",
-      "answer": "Mauritius Rupee"
+      "answer": "Africa"
     },
     {
       "question": "Mayotte",
-      "answer": "Euro"
+      "answer": "Africa"
     },
     {
       "question": "Mexico",
-      "answer": "Mexican Nuevo Peso"
+      "answer": "North America"
     },
     {
       "question": "Micronesia, Federated States of",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Moldova",
-      "answer": "Moldovan Leu"
+      "answer": "Europe"
     },
     {
       "question": "Monaco",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Mongolia",
-      "answer": "Mongolian Tugrik"
+      "answer": "Asia"
+    },
+    {
+      "question": "Montenegro",
+      "answer": "Europe"
     },
     {
       "question": "Montserrat",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Morocco",
-      "answer": "Moroccan Dirham"
+      "answer": "Africa"
     },
     {
       "question": "Mozambique",
-      "answer": "Mozambique Metical"
+      "answer": "Africa"
     },
     {
       "question": "Myanmar",
-      "answer": "Myanmar Kyat"
+      "answer": "Asia"
     },
     {
       "question": "Namibia",
-      "answer": "Namibian Dollar"
+      "answer": "Africa"
     },
     {
       "question": "Nauru",
-      "answer": "Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Nepal",
-      "answer": "Nepalese Rupee"
+      "answer": "Asia"
     },
     {
       "question": "Netherlands",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Netherlands Antilles",
-      "answer": "Netherlands Antillean Guilder"
+      "answer": "North America"
     },
     {
       "question": "New Caledonia",
-      "answer": "CFP Franc"
+      "answer": "Oceania"
     },
     {
       "question": "New Zealand",
-      "answer": "New Zealand Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Nicaragua",
-      "answer": "Nicaraguan Cordoba Oro"
+      "answer": "North America"
     },
     {
       "question": "Niger",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Nigeria",
-      "answer": "Nigerian Naira"
+      "answer": "Africa"
     },
     {
       "question": "Niue",
-      "answer": "New Zealand Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Norfolk Island",
-      "answer": "Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "North Korea",
-      "answer": "North Korean Won"
+      "answer": "Asia"
     },
     {
       "question": "Northern Ireland",
-      "answer": "Pound Sterling"
+      "answer": "Europe"
     },
     {
       "question": "Northern Mariana Islands",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Norway",
-      "answer": "Norwegian Krone"
+      "answer": "Europe"
     },
     {
       "question": "Oman",
-      "answer": "Omani Rial"
+      "answer": "Asia"
     },
     {
       "question": "Pakistan",
-      "answer": "Pakistan Rupee"
+      "answer": "Asia"
     },
     {
       "question": "Palau",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Palestine",
-      "answer": null
+      "answer": "Asia"
     },
     {
       "question": "Panama",
-      "answer": "Panamanian Balboa"
+      "answer": "North America"
     },
     {
       "question": "Papua New Guinea",
-      "answer": "Papua New Guinea Kina"
+      "answer": "Oceania"
     },
     {
       "question": "Paraguay",
-      "answer": "Paraguay Guarani"
+      "answer": "South America"
     },
     {
       "question": "Peru",
-      "answer": "Peruvian Nuevo Sol"
+      "answer": "South America"
     },
     {
       "question": "Philippines",
-      "answer": "Philippine Peso"
+      "answer": "Asia"
     },
     {
-      "question": "Pitcairn Islands",
-      "answer": "New Zealand Dollar"
+      "question": "Pitcairn",
+      "answer": "Oceania"
     },
     {
       "question": "Poland",
-      "answer": "Polish Zloty"
+      "answer": "Europe"
     },
     {
       "question": "Portugal",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Puerto Rico",
-      "answer": "US Dollar"
+      "answer": "North America"
     },
     {
       "question": "Qatar",
-      "answer": "Qatari Rial"
+      "answer": "Asia"
     },
     {
       "question": "Reunion",
-      "answer": "Euro"
+      "answer": "Africa"
     },
     {
       "question": "Romania",
-      "answer": "Romanian New Leu"
+      "answer": "Europe"
     },
     {
       "question": "Russia",
-      "answer": "Russian Ruble"
+      "answer": "Europe"
     },
     {
       "question": "Rwanda",
-      "answer": "Rwanda Franc"
+      "answer": "Africa"
     },
     {
       "question": "Saint Helena",
-      "answer": "St. Helena Pound"
+      "answer": "Africa"
     },
     {
       "question": "Saint Kitts and Nevis",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Saint Lucia",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Saint Pierre and Miquelon",
-      "answer": " Euro"
+      "answer": "North America"
     },
     {
       "question": "Saint Vincent and the Grenadines",
-      "answer": "East Caribbean Dollar"
+      "answer": "North America"
     },
     {
       "question": "Samoa",
-      "answer": "Samoan Tala"
+      "answer": "Oceania"
     },
     {
       "question": "San Marino",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Sao Tome and Principe",
-      "answer": " Dobra"
+      "answer": "Africa"
     },
     {
       "question": "Saudi Arabia",
-      "answer": "Saudi Riyal"
+      "answer": "Asia"
     },
     {
       "question": "Scotland",
-      "answer": "Pound Sterling"
+      "answer": "Europe"
     },
     {
       "question": "Senegal",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Serbia",
-      "answer": "Serbian dinar"
+      "answer": "Europe"
     },
     {
       "question": "Seychelles",
-      "answer": "Seychelles Rupee"
+      "answer": "Africa"
     },
     {
       "question": "Sierra Leone",
-      "answer": "Sierra Leone Leone"
+      "answer": "Africa"
     },
     {
       "question": "Singapore",
-      "answer": "Singapore Dollar"
+      "answer": "Asia"
     },
     {
       "question": "Slovakia",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Slovenia",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Solomon Islands",
-      "answer": "Solomon Islands Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Somalia",
-      "answer": "Somali Shilling"
+      "answer": "Africa"
     },
     {
       "question": "South Africa",
-      "answer": "South African Rand"
+      "answer": "Africa"
     },
     {
       "question": "South Georgia and the South Sandwich Islands",
-      "answer": "Pound Sterling"
+      "answer": "Antarctica"
     },
     {
       "question": "South Korea",
-      "answer": "Korean Won"
+      "answer": "Asia"
     },
     {
       "question": "South Sudan",
-      "answer": "South Sudan Pound"
+      "answer": "Africa"
     },
     {
       "question": "Spain",
-      "answer": "Euro"
+      "answer": "Europe"
     },
     {
       "question": "Sri Lanka",
-      "answer": "Sri Lankan Rupee"
+      "answer": "Asia"
     },
     {
       "question": "Sudan",
-      "answer": "Sudanese Pound"
+      "answer": "Africa"
     },
     {
       "question": "Suriname",
-      "answer": "Surinam Dollar"
+      "answer": "South America"
     },
     {
       "question": "Svalbard and Jan Mayen",
-      "answer": "Norwegian Krone"
+      "answer": "Europe"
     },
     {
       "question": "Swaziland",
-      "answer": "Swaziland Lilangeni"
+      "answer": "Africa"
     },
     {
       "question": "Sweden",
-      "answer": "Swedish Krona"
+      "answer": "Europe"
     },
     {
       "question": "Switzerland",
-      "answer": "Swiss Franc"
+      "answer": "Europe"
     },
     {
       "question": "Syria",
-      "answer": "Syrian Pound"
+      "answer": "Asia"
     },
     {
       "question": "Tajikistan",
-      "answer": "Tajik Somoni"
+      "answer": "Asia"
     },
     {
       "question": "Tanzania",
-      "answer": "Tanzanian Shilling"
+      "answer": "Africa"
     },
     {
       "question": "Thailand",
-      "answer": "Thai Baht"
+      "answer": "Asia"
     },
     {
       "question": "The Democratic Republic of Congo",
-      "answer": "Franc Congolais"
+      "answer": "Africa"
     },
     {
       "question": "Togo",
-      "answer": "CFA Franc BCEAO"
+      "answer": "Africa"
     },
     {
       "question": "Tokelau",
-      "answer": "New Zealand Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Tonga",
-      "answer": "Tongan Pa'anga"
+      "answer": "Oceania"
     },
     {
       "question": "Trinidad and Tobago",
-      "answer": "Trinidad and Tobago Dollar"
+      "answer": "North America"
     },
     {
       "question": "Tunisia",
-      "answer": "Tunisian Dollar"
+      "answer": "Africa"
     },
     {
       "question": "Turkey",
-      "answer": "Turkish Lira"
+      "answer": "Asia"
     },
     {
       "question": "Turkmenistan",
-      "answer": "Manat"
+      "answer": "Asia"
     },
     {
       "question": "Turks and Caicos Islands",
-      "answer": "US Dollar"
+      "answer": "North America"
     },
     {
       "question": "Tuvalu",
-      "answer": "Australian Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Uganda",
-      "answer": "Uganda Shilling"
+      "answer": "Africa"
     },
     {
       "question": "Ukraine",
-      "answer": "Ukraine Hryvnia"
+      "answer": "Europe"
     },
     {
       "question": "United Arab Emirates",
-      "answer": "Arab Emirates Dirham"
+      "answer": "Asia"
     },
     {
       "question": "United Kingdom",
-      "answer": "Pound Sterling"
+      "answer": "Europe"
     },
     {
       "question": "United States",
-      "answer": "US Dollar"
+      "answer": "North America"
     },
     {
       "question": "United States Minor Outlying Islands",
-      "answer": "US Dollar"
+      "answer": "Oceania"
     },
     {
       "question": "Uruguay",
-      "answer": "Uruguayan Peso"
+      "answer": "South America"
     },
     {
       "question": "Uzbekistan",
-      "answer": "Uzbekistan Sum"
+      "answer": "Asia"
     },
     {
       "question": "Vanuatu",
-      "answer": "Vanuatu Vatu"
+      "answer": "Oceania"
     },
     {
       "question": "Venezuela",
-      "answer": "Venezuelan Bolivar"
+      "answer": "South America"
     },
     {
       "question": "Vietnam",
-      "answer": "Vietnamese Dong"
+      "answer": "Asia"
     },
     {
       "question": "Virgin Islands, British",
-      "answer": "Pound Sterling"
+      "answer": "North America"
     },
     {
       "question": "Virgin Islands, U.S.",
-      "answer": "US Dollar"
+      "answer": "North America"
     },
     {
       "question": "Wales",
-      "answer": "Pound Sterlin"
+      "answer": "Europe"
     },
     {
       "question": "Wallis and Futuna",
-      "answer": "CFP Franc"
+      "answer": "Oceania"
     },
     {
       "question": "Western Sahara",
-      "answer": "Moroccan Dirham"
+      "answer": "Africa"
     },
     {
       "question": "Yemen",
-      "answer": "Yemeni Rial"
+      "answer": "Asia"
     },
     {
       "question": "Zambia",
-      "answer": "Zambian Kwacha"
+      "answer": "Africa"
     },
     {
       "question": "Zimbabwe",
-      "answer": "Zimbabwe Dollar"
+      "answer": "Africa"
     }
   ]
 }

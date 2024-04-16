@@ -1,7 +1,7 @@
 {
   "mode": "text",
-  "theme": "continents",
-  "themeQuestion": "Wich answer",
+  "theme": "Continents",
+  "themeQuestion": "Wold Countries By Continent",
   "cards": [
     {
       "question": "Afghanistan",

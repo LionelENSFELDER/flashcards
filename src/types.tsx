@@ -6,6 +6,8 @@ export type ThemeNameType =
   | "Languages"
   | "Babywords"
   | "Actors"
+  | "Continents"
+  | "Religions"
   | "Javascript";
 
 export type ThemeType = {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
 import FlashCard from "./components/flash-card";
@@ -18,43 +18,21 @@ function App() {
   const [score, setScore] = useState<number>(0);
   const [maxCards, setMaxCards] = useState<number>(10);
   const [currentTheme, setCurrentTheme] = useState<ThemeType>(getTheme());
-  const randomCards: DataCardType[] = [];
+  const randomizer = useCallback((cards: DataCardType[]): DataCardType[] => {
+    return cards.sort((a, b) => 0.5 - Math.random());
+  }, []);
 
-  const isCardExist = (card: DataCardType): boolean => {
-    let isExist = false;
-    randomCards.forEach((element) => {
-      if (element.question === card.question) {
-        isExist = true;
-      }
-    });
-    return isExist;
-  };
-
-  const selectRandomCard = () => {
-    return currentTheme.cards[
-      Math.floor(Math.random() * currentTheme.cards.length)
-    ];
-  };
-
-  const getRandomCards = () => {
-    while (
-      currentTheme.cards.length > randomCards.length &&
-      randomCards.length < maxCards
-    ) {
-      const randomCard = selectRandomCard();
-      if (!isCardExist(randomCard)) {
-        randomCards.push(randomCard);
-      }
-    }
-  };
-  getRandomCards();
+  const shuffledArray = randomizer(currentTheme.cards);
+  const displayedCards = shuffledArray.slice(0, maxCards);
+  const maxScore: number = displayedCards.length;
+  const themeQuestion = currentTheme.themeQuestion;
+  const mode: string = currentTheme.mode;
 
   const updateMaxCard = (maxCards: number) => {
     setMaxCards(maxCards);
   };
 
-  const mode: string = currentTheme.mode;
-  const items = randomCards.map((card: DataCardType, index: number) => (
+  const items = displayedCards.map((card: DataCardType, index: number) => (
     <FlashCard
       mode={mode}
       key={index}
@@ -74,8 +52,6 @@ function App() {
     const nextScore = score + point;
     setScore(nextScore);
   };
-  const maxScore: number = randomCards.length;
-  const themeQuestion = currentTheme.themeQuestion;
 
   return (
     <ThemeProvider theme={colorsDefault}>

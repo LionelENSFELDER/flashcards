@@ -53,14 +53,19 @@ const CardButton = ({
 type QuestionFormaterProps = {
   mode: ThemeType["mode"];
   question: string;
+  answer: string;
 };
-const QuestionFormater = ({ mode, question }: QuestionFormaterProps) => {
+const QuestionFormater = ({
+  mode,
+  question,
+  answer,
+}: QuestionFormaterProps) => {
   if (mode === "image") {
     return (
       <Box
         component={"img"}
         src={question}
-        alt={question + " image"}
+        alt={"image of " + answer}
         sx={{ position: "relative", width: 1, height: "auto" }}
       />
     );
@@ -120,7 +125,7 @@ const FlashCard = memo(
               color={isLearned === StateEnum.No ? "error" : "success"}
             />
           </Typography>
-          <QuestionFormater mode={mode} question={question} />
+          <QuestionFormater mode={mode} question={question} answer={answer} />
           <Typography
             variant="h4"
             component="div"

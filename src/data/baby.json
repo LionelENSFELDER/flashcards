@@ -1,31 +1,27 @@
 {
   "mode": "image",
   "theme": "Baby",
-  "themeQuestion": "Baby Words",
+  "themeQuestion": "Guess !",
   "cards": [
     {
-      "question": "https://placehold.co/600x400?text=Cuisine",
+      "question": "https://picsum.photos/id/1/600/400",
       "answer": "Cuisine"
     },
     {
-      "question": "https://placehold.co/600x400?text=Salle de bain",
+      "question": "https://picsum.photos/id/2/600/400",
       "answer": "Salle de bain"
     },
     {
-      "question": "https://placehold.co/600x400?text=Chambre",
+      "question": "https://picsum.photos/id/3/600/400",
       "answer": "Chambre"
     },
     {
-      "question": "https://placehold.co/600x400?text=Salon",
+      "question": "https://picsum.photos/id/4/600/400",
       "answer": "Salon"
     },
     {
-      "question": "https://placehold.co/600x400?text=Toilette",
-      "answer": "Toilette"
-    },
-    {
-      "question": "https://placehold.co/600x400?text=Chambre de Liam",
-      "answer": "Chambre de Liam"
+      "question": "https://picsum.photos/id/5/600/400",
+      "answer": "Toilettes"
     }
   ]
 }

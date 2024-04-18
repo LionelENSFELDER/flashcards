@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
 import FlashCard from "./components/flash-card";
@@ -19,10 +19,13 @@ function App() {
   const [maxCards, setMaxCards] = useState<number>(10);
   const [currentTheme, setCurrentTheme] = useState<ThemeType>(getTheme());
   const randomizer = useCallback((cards: DataCardType[]): DataCardType[] => {
-    return cards.sort((a, b) => 0.5 - Math.random());
+    return cards.sort(() => 0.5 - Math.random());
   }, []);
 
-  const shuffledArray = randomizer(currentTheme.cards);
+  const shuffledArray = useMemo(
+    () => randomizer(currentTheme.cards),
+    [currentTheme, maxCards, randomizer]
+  );
   const displayedCards = shuffledArray.slice(0, maxCards);
   const maxScore: number = displayedCards.length;
   const themeQuestion = currentTheme.themeQuestion;

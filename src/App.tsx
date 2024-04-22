@@ -1,8 +1,8 @@
-import { useState, useCallback, useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
 import FlashCard from "./components/flash-card";
-import { ThemeType, StateEnum, DataCardType } from "./types";
+import { StateEnum, DataCardType } from "./types";
 import colorsDefault from "./colors/colors-default";
 import CardStack from "./components/card-stack";
 import SwipeIcon from "@mui/icons-material/Swipe";
@@ -10,61 +10,51 @@ import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
 import NavigationTip from "./components/navigation-tip";
 import ThemeSelect from "./components/theme-select";
-import { getTheme, getThemeList } from "./theme/get-theme";
+import { getTheme } from "./theme/get-theme";
 import "./index.css";
 import MaxCardsSelect from "./components/max-cards-select";
+import useAppStore from "./stores/app-store";
 
 function App() {
-  const [score, setScore] = useState<number>(0);
-  const [maxCards, setMaxCards] = useState<number>(10);
-  const [currentTheme, setCurrentTheme] = useState<ThemeType>(getTheme());
+  const maxCards = useAppStore((state) => state.maxCards);
+  const score = useAppStore((state) => state.score);
+  const updateScore = useAppStore((state) => state.updateScore);
+  const currentTheme = useAppStore((state) => state.currentTheme);
   const randomizer = useCallback((cards: DataCardType[]): DataCardType[] => {
     return cards.sort(() => 0.5 - Math.random());
   }, []);
 
   const shuffledArray = useMemo(
-    () => randomizer(currentTheme.cards),
-    [currentTheme, maxCards, randomizer]
+    () => randomizer(getTheme(currentTheme).cards),
+    [currentTheme, randomizer]
   );
-  const displayedCards = shuffledArray.slice(0, maxCards);
-  const maxScore: number = displayedCards.length;
-  const themeQuestion = currentTheme.themeQuestion;
-  const mode: string = currentTheme.mode;
+  const shuffleCards = shuffledArray.slice(0, maxCards);
+  const maxScore: number = shuffleCards.length;
+  const mainTitle = getTheme(currentTheme).themeQuestion;
+  const flashCardsMode: string = getTheme(currentTheme).mode;
 
-  const updateMaxCard = (maxCards: number) => {
-    setMaxCards(maxCards);
-  };
-
-  const items = displayedCards.map((card: DataCardType, index: number) => (
+  const flashCards = shuffleCards.map((card: DataCardType, index: number) => (
     <FlashCard
-      mode={mode}
+      mode={flashCardsMode}
       key={index}
       index={index}
       question={card.question}
       answer={card.answer}
       state={StateEnum.Unviewed}
-      callback={(point: number) => updateScore(point)}
+      callback={() => updateScore()}
     />
   ));
-  const updateCurrentTheme = (name: string) => {
-    const newTheme: ThemeType = getTheme(name);
-    setCurrentTheme(newTheme);
-  };
-
-  const updateScore = (point: number) => {
-    const nextScore = score + point;
-    setScore(nextScore);
-  };
+  // const getScore = (flashCards[]]): number => {
+  //   const score = items.filter((item) => item.state === 1);
+  //   return score.length;
+  // };
 
   return (
     <ThemeProvider theme={colorsDefault}>
       <Container maxWidth="sm" sx={{ p: 4, pr: 5 }}>
         <Box sx={{ display: "flex", flexDirection: "row", mb: 3 }}>
-          <ThemeSelect
-            themesList={getThemeList()}
-            callback={updateCurrentTheme}
-          />
-          <MaxCardsSelect callback={updateMaxCard} />
+          <ThemeSelect />
+          <MaxCardsSelect />
         </Box>
         <Typography
           variant="h4"
@@ -78,15 +68,16 @@ function App() {
             px: 3,
           }}
         >
-          {themeQuestion} - {score} / {maxScore}
+          {mainTitle} - {score} / {maxScore}
         </Typography>
-        <CardStack cards={items} />
+        <CardStack cards={flashCards} />
         <Box sx={{ pt: 4, color: "text.primary" }}>
           Navigation :
           <NavigationTip icon={WestIcon} /> ,
           <NavigationTip icon={EastIcon} /> or
           <NavigationTip icon={SwipeIcon} />
         </Box>
+        <Typography>{maxCards}</Typography>
       </Container>
     </ThemeProvider>
   );

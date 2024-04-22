@@ -1,20 +1,13 @@
-import { useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
+import useAppStore from "../stores/app-store";
+import { getThemeList } from "../theme/get-theme";
 
-type ThemeSelectType = {
-  themesList: string[];
-  callback: (name: string) => void;
-};
-const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
-  const [theme, setTheme] = useState<string>(themesList[0]);
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setTheme(event.target.value);
-    callback(event.target.value);
-  };
+const ThemeSelect = () => {
+  const currentTheme = useAppStore((state) => state.currentTheme);
+  const updateCurrentTheme = useAppStore((state) => state.updateCurrentTheme);
 
   return (
     <FormControl size="medium" sx={{ minWidth: 300, mr: 4 }}>
@@ -23,16 +16,16 @@ const ThemeSelect = ({ themesList, callback }: ThemeSelectType) => {
         variant="outlined"
         labelId="theme-select-label"
         id="theme-select"
-        value={theme}
+        value={currentTheme}
         label="Select your theme"
-        onChange={handleChange}
+        onChange={(event) => updateCurrentTheme(event.target.value)}
         sx={{
           color: "text.main",
           fontWeight: "bold",
           borderRadius: 4,
         }}
       >
-        {themesList.map((element, index) => {
+        {getThemeList().map((element, index) => {
           return (
             <MenuItem key={index} value={element}>
               {element}

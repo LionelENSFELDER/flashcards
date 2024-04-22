@@ -1,20 +1,13 @@
-import { useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import useAppStore from "../stores/app-store";
+import Select from "@mui/material/Select";
 
-type ThemeSelectType = {
-  callback: (maxCards: number) => void;
-};
-const MaxCardsSelect = ({ callback }: ThemeSelectType) => {
-  const availableNumbers: number[] = [10, 20, 40, 80];
-  const [maxCards, setMaxCards] = useState<number>(10);
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setMaxCards(parseInt(event.target.value));
-    callback(parseInt(event.target.value));
-  };
+const MaxCardsSelect = () => {
+  const maxCardsAvailable: number[] = [10, 20, 40, 80];
+  const maxCards = useAppStore((state) => state.maxCards);
+  const updateMaxCards = useAppStore((state) => state.updateMaxCards);
 
   return (
     <FormControl size="medium" sx={{ minWidth: 120 }}>
@@ -25,14 +18,14 @@ const MaxCardsSelect = ({ callback }: ThemeSelectType) => {
         id="max-cards-select"
         value={maxCards.toString()}
         label="Select max number of cards"
-        onChange={handleChange}
+        onChange={(event) => updateMaxCards(parseInt(event.target.value))}
         sx={{
           color: "text.main",
           fontWeight: "bold",
           borderRadius: 4,
         }}
       >
-        {availableNumbers.map((element, index) => {
+        {maxCardsAvailable.map((element, index) => {
           return (
             <MenuItem key={index} value={element}>
               {element}

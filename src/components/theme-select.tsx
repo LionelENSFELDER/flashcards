@@ -3,7 +3,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import useAppStore from "../stores/app-store";
-import { getThemeList } from "../theme/get-theme";
+import { getThemeList } from "../theme/get-theme-list";
 
 const ThemeSelect = () => {
   const currentTheme = useAppStore((state) => state.currentTheme);

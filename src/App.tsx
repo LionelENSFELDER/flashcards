@@ -1,53 +1,22 @@
-import { useCallback, useMemo } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box, Container, Typography } from "@mui/material";
-import FlashCard from "./components/flash-card";
-import { StateEnum, DataCardType } from "./types";
 import colorsDefault from "./colors/colors-default";
-import CardStack from "./components/card-stack";
-import SwipeIcon from "@mui/icons-material/Swipe";
-import EastIcon from "@mui/icons-material/East";
-import WestIcon from "@mui/icons-material/West";
-import NavigationTip from "./components/navigation-tip";
+import Deck from "./components/deck";
+import NavigationTips from "./components/navigation-tips";
 import ThemeSelect from "./components/theme-select";
 import { getTheme } from "./theme/get-theme";
-import "./index.css";
 import MaxCardsSelect from "./components/max-cards-select";
 import useAppStore from "./stores/app-store";
+import "./index.css";
 
 function App() {
   const maxCards = useAppStore((state) => state.maxCards);
   const score = useAppStore((state) => state.score);
-  const updateScore = useAppStore((state) => state.updateScore);
   const currentTheme = useAppStore((state) => state.currentTheme);
-  const randomizer = useCallback((cards: DataCardType[]): DataCardType[] => {
-    return cards.sort(() => 0.5 - Math.random());
-  }, []);
 
-  const shuffledArray = useMemo(
-    () => randomizer(getTheme(currentTheme).cards),
-    [currentTheme, randomizer]
-  );
-  const shuffleCards = shuffledArray.slice(0, maxCards);
-  const maxScore: number = shuffleCards.length;
-  const mainTitle = getTheme(currentTheme).themeQuestion;
-  const flashCardsMode: string = getTheme(currentTheme).mode;
-
-  const flashCards = shuffleCards.map((card: DataCardType, index: number) => (
-    <FlashCard
-      mode={flashCardsMode}
-      key={index}
-      index={index}
-      question={card.question}
-      answer={card.answer}
-      state={StateEnum.Unviewed}
-      callback={() => updateScore()}
-    />
-  ));
-  // const getScore = (flashCards[]]): number => {
-  //   const score = items.filter((item) => item.state === 1);
-  //   return score.length;
-  // };
+  const cards = getTheme(currentTheme)
+    .cards.sort(() => 0.5 - Math.random())
+    .slice(0, maxCards);
 
   return (
     <ThemeProvider theme={colorsDefault}>
@@ -68,16 +37,10 @@ function App() {
             px: 3,
           }}
         >
-          {mainTitle} - {score} / {maxScore}
+          {getTheme(currentTheme).themeQuestion} - {score} / {cards.length}
         </Typography>
-        <CardStack cards={flashCards} />
-        <Box sx={{ pt: 4, color: "text.primary" }}>
-          Navigation :
-          <NavigationTip icon={WestIcon} /> ,
-          <NavigationTip icon={EastIcon} /> or
-          <NavigationTip icon={SwipeIcon} />
-        </Box>
-        <Typography>{maxCards}</Typography>
+        <Deck cards={cards} mode={getTheme(currentTheme).mode} />
+        <NavigationTips />
       </Container>
     </ThemeProvider>
   );

@@ -1,4 +1,4 @@
-import { useState, useCallback, memo } from "react";
+import { useState } from "react";
 import { Box, Card, Chip, Badge } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,6 +10,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import StyleIcon from "@mui/icons-material/Style";
 import { StateEnum, FlashCardType, ThemeType } from "../types";
+import useAppStore from "../stores/app-store";
 
 type CardButtonProps = {
   answerHidden?: boolean;
@@ -19,6 +20,11 @@ type CardButtonProps = {
   label: string;
   bgcolor?: string;
   mt?: number;
+};
+type QuestionFormaterProps = {
+  mode: ThemeType["mode"];
+  question: string;
+  answer: string;
 };
 const CardButton = ({
   answerHidden,
@@ -49,12 +55,6 @@ const CardButton = ({
     </Button>
   );
 };
-
-type QuestionFormaterProps = {
-  mode: ThemeType["mode"];
-  question: string;
-  answer: string;
-};
 const QuestionFormater = ({
   mode,
   question,
@@ -76,99 +76,88 @@ const QuestionFormater = ({
     </Typography>
   );
 };
-const FlashCard = memo(
-  ({ mode, index, question, answer, state, callback }: FlashCardType) => {
-    const [answerHidden, setAnswerHidden] = useState<boolean>(true);
-    const [isLearned, setIsLearned] = useState<StateEnum>(state);
-    const handleCardClick = useCallback(
-      (cardIsLearned: StateEnum) => {
-        if (cardIsLearned === StateEnum.Unviewed) {
-          return;
-        } else if (cardIsLearned === StateEnum.Yes) {
-          callback(1);
-          setIsLearned(StateEnum.Yes);
-        } else {
-          setIsLearned(StateEnum.No);
-        }
-      },
-      [callback]
-    );
-    return (
-      <Card
-        sx={{
-          minHeight: 350,
-          border: 4,
-          borderColor: "primary.main",
-          borderRadius: "20px",
-          boxShadow: "none",
-        }}
-      >
-        <CardContent sx={{ position: "relative" }}>
-          <Badge
-            badgeContent={index + 1}
-            color="secondary"
-            sx={{ position: "absolute", right: "5%" }}
-          >
-            <StyleIcon fontSize="large" />
-          </Badge>
-          <Typography
-            variant="h6"
-            color="text.primary"
-            gutterBottom
-            sx={{
-              visibility:
-                isLearned === StateEnum.Unviewed ? "hidden" : "visible",
-            }}
-          >
-            <Chip
-              label={isLearned === StateEnum.No ? "False" : "True !"}
-              color={isLearned === StateEnum.No ? "error" : "success"}
-            />
-          </Typography>
-          <QuestionFormater mode={mode} question={question} answer={answer} />
-          <Typography
-            variant="h4"
-            component="div"
-            sx={{
-              color: answerHidden ? "transparent" : "inherit",
-              textShadow: answerHidden ? "0 0 16px rgb(0, 0, 92)" : "none",
-            }}
-          >
-            {answer}
-          </Typography>
-          <Box sx={{ display: "block", position: "relative" }}>
-            <CardButton
-              answerHidden={answerHidden}
-              handleClick={() => setAnswerHidden(!answerHidden)}
-              startIcon={
-                answerHidden ? <VisibilityIcon /> : <VisibilityOffIcon />
-              }
-              label={answerHidden ? "View answer" : "Hide answer"}
-            />
-          </Box>
-        </CardContent>
-        <CardActions>
-          <CardButton
-            disabled={isLearned !== StateEnum.Unviewed ? true : false}
-            handleClick={() => handleCardClick(StateEnum.No)}
-            startIcon={<ThumbDownIcon />}
-            label={"None"}
-            mt={1}
-          />
 
-          <CardButton
-            // sx={{bdcolor: "secondary.main"}}
-            disabled={isLearned !== StateEnum.Unviewed ? true : false}
-            handleClick={() => handleCardClick(StateEnum.Yes)}
-            startIcon={<ThumbUpIcon />}
-            label={"Get it !"}
-            bgcolor="secondary.main"
-            mt={1}
+const FlashCard = ({ mode, index, question, answer }: FlashCardType) => {
+  const incScore = useAppStore((state) => state.incScore);
+  const [answerHidden, setAnswerHidden] = useState<boolean>(true);
+  const [isLearned, setIsLearned] = useState<StateEnum>(StateEnum.Unviewed);
+  const setYes = () => {
+    setIsLearned(StateEnum.Yes);
+    incScore();
+  };
+  const setNo = () => {
+    setIsLearned(StateEnum.No);
+  };
+  const isButtonDisable = (): boolean => {
+    return isLearned !== StateEnum.Unviewed ? true : false;
+  };
+
+  return (
+    <Card
+      sx={{
+        minHeight: 350,
+        border: 4,
+        borderColor: "primary.main",
+        borderRadius: "20px",
+        boxShadow: "none",
+      }}
+    >
+      <CardContent sx={{ position: "relative" }}>
+        <Badge
+          badgeContent={index + 1}
+          color="secondary"
+          sx={{ position: "absolute", right: "5%" }}
+        >
+          <StyleIcon fontSize="large" />
+        </Badge>
+        <Typography
+          variant="h6"
+          color="text.primary"
+          gutterBottom
+          sx={{
+            visibility: isLearned === StateEnum.Unviewed ? "hidden" : "visible",
+          }}
+        >
+          <Chip
+            label={isLearned === StateEnum.No ? "False" : "True !"}
+            color={isLearned === StateEnum.No ? "error" : "success"}
           />
-        </CardActions>
-      </Card>
-    );
-  }
-);
+        </Typography>
+        <QuestionFormater mode={mode} question={question} answer={answer} />
+        <Typography variant="h4" component="div">
+          {answerHidden ? "******" : answer}
+        </Typography>
+        <Box sx={{ display: "block", position: "relative" }}>
+          <CardButton
+            answerHidden={answerHidden}
+            handleClick={() => setAnswerHidden(!answerHidden)}
+            startIcon={
+              answerHidden ? <VisibilityIcon /> : <VisibilityOffIcon />
+            }
+            label={answerHidden ? "View answer" : "Hide answer"}
+          />
+        </Box>
+      </CardContent>
+      <CardActions>
+        <CardButton
+          disabled={isButtonDisable()}
+          handleClick={setNo}
+          startIcon={<ThumbDownIcon />}
+          label={"None"}
+          mt={1}
+        />
+
+        <CardButton
+          disabled={isButtonDisable()}
+          handleClick={setYes}
+          startIcon={<ThumbUpIcon />}
+          label={"Get it !"}
+          bgcolor="secondary.main"
+          mt={1}
+        />
+      </CardActions>
+    </Card>
+  );
+};
 
 export default FlashCard;

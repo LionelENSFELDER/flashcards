@@ -3,17 +3,22 @@ type Store = {
   maxCards: number;
   updateMaxCards: (max: number) => void;
   score: number;
-  updateScore: () => void;
+  incScore: () => void;
   currentTheme: string;
   updateCurrentTheme: (name: string) => void;
 };
 const useAppStore = create<Store>()((set) => ({
   maxCards: 10,
-  updateMaxCards: (maxCards) => set({ maxCards }),
+  updateMaxCards: (maxCards) => {
+    set({ maxCards }), set({ score: 0 });
+  },
   score: 0,
-  updateScore: () => set((state) => ({ score: state.score + 1 })),
+  // updateScore: () => set((state) => ({ score: state.score + 1 })),
+  incScore: () => set((state) => ({ score: state.score + 1 })),
   currentTheme: "Capitals",
-  updateCurrentTheme: (name) => set({ currentTheme: name }),
+  updateCurrentTheme: (name) => {
+    set({ currentTheme: name }), set({ score: 0 });
+  },
 }));
 
 export default useAppStore;

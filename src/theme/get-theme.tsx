@@ -5,16 +5,7 @@ import baby from "../data/baby.json";
 import continents from "../data/continents.json";
 import religions from "../data/religions.json";
 import { ThemeType } from "../types";
-export const getThemeList = (): string[] => {
-  return [
-    "Baby",
-    "Capitals",
-    "Currencies",
-    "Languages",
-    "Continents",
-    "Religions",
-  ];
-};
+
 export const getTheme = (name?: string): ThemeType => {
   switch (name) {
     case "Capitals":

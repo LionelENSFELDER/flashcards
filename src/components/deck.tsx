@@ -32,9 +32,7 @@ const Deck = ({ cards, mode }: DeckProps) => {
       navigation={true}
       modules={[EffectCards, Keyboard, Pagination, Navigation]}
     >
-      {/* {<SwiperSlide key={1}>{flashCards[0]}</SwiperSlide>} */}
       {flashCards.map((card, index) => {
-        console.log(card.props.question);
         return <SwiperSlide key={index}>{card}</SwiperSlide>;
       })}
     </Swiper>

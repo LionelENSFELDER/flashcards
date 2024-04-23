@@ -29,9 +29,7 @@ export type FlashCardType = {
   mode: string;
   question: string;
   answer: string;
-  // state: StateEnum;
   index: number;
-  // callback: (point: number) => void;
 };
 export type DataCardType = {
   question: string;

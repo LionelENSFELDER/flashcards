@@ -1,5 +1,7 @@
 import { ThemeProvider } from "@mui/material/styles";
-import { Box, Container, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 import colorsDefault from "./colors/colors-default";
 import Deck from "./components/deck";
 import NavigationTips from "./components/navigation-tips";
@@ -10,10 +12,7 @@ import useAppStore from "./stores/app-store";
 import "./index.css";
 
 function App() {
-  const maxCards = useAppStore((state) => state.maxCards);
-  const score = useAppStore((state) => state.score);
-  const currentTheme = useAppStore((state) => state.currentTheme);
-
+  const { score, maxCards, currentTheme } = useAppStore();
   const cards = getTheme(currentTheme)
     .cards.sort(() => 0.5 - Math.random())
     .slice(0, maxCards);

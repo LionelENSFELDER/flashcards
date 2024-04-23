@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import { NavigationTipType } from "../types";
 import SwipeIcon from "@mui/icons-material/Swipe";
 import EastIcon from "@mui/icons-material/East";

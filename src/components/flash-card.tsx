@@ -78,7 +78,7 @@ const QuestionFormater = ({
 };
 
 const FlashCard = ({ mode, index, question, answer }: FlashCardType) => {
-  const incScore = useAppStore((state) => state.incScore);
+  const { incScore } = useAppStore();
   const [answerHidden, setAnswerHidden] = useState<boolean>(true);
   const [isLearned, setIsLearned] = useState<StateEnum>(StateEnum.Unviewed);
   const setYes = () => {

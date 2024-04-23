@@ -13,7 +13,6 @@ const useAppStore = create<Store>()((set) => ({
     set({ maxCards }), set({ score: 0 });
   },
   score: 0,
-  // updateScore: () => set((state) => ({ score: state.score + 1 })),
   incScore: () => set((state) => ({ score: state.score + 1 })),
   currentTheme: "Capitals",
   updateCurrentTheme: (name) => {

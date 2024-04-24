@@ -1,9 +1,13 @@
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
 body {
-  background-image: url("./assets/img/background.jpg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: fill;
+  background: linear-gradient(
+    158deg,
+    rgba(117, 109, 255, 1) 14%,
+    rgba(107, 233, 170, 1) 60%
+  );
 }
 .swiper-3d .swiper-slide-shadow {
   background: none !important;

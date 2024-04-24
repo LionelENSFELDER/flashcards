@@ -1,21 +1,23 @@
 import { create } from "zustand";
-type Store = {
+
+interface StoreState {
   maxCards: number;
   updateMaxCards: (max: number) => void;
   score: number;
-  incScore: () => void;
+  incrementScore: () => void;
   currentTheme: string;
-  updateCurrentTheme: (name: string) => void;
-};
-const useAppStore = create<Store>()((set) => ({
+  setCurrentTheme: (name: string) => void;
+}
+
+const useAppStore = create<StoreState>()((set) => ({
   maxCards: 10,
   updateMaxCards: (maxCards) => {
     set({ maxCards }), set({ score: 0 });
   },
   score: 0,
-  incScore: () => set((state) => ({ score: state.score + 1 })),
+  incrementScore: () => set((state) => ({ score: state.score + 1 })),
   currentTheme: "Capitals",
-  updateCurrentTheme: (name) => {
+  setCurrentTheme: (name) => {
     set({ currentTheme: name }), set({ score: 0 });
   },
 }));

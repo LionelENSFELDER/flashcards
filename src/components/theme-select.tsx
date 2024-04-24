@@ -6,8 +6,7 @@ import useAppStore from "../stores/app-store";
 import { getThemeList } from "../theme/get-theme-list";
 
 const ThemeSelect = () => {
-  const currentTheme = useAppStore((state) => state.currentTheme);
-  const updateCurrentTheme = useAppStore((state) => state.updateCurrentTheme);
+  const { currentTheme, setCurrentTheme } = useAppStore();
 
   return (
     <FormControl size="medium" sx={{ minWidth: 300, mr: 4 }}>
@@ -18,7 +17,7 @@ const ThemeSelect = () => {
         id="theme-select"
         value={currentTheme}
         label="Select your theme"
-        onChange={(event) => updateCurrentTheme(event.target.value)}
+        onChange={(event) => setCurrentTheme(event.target.value)}
         sx={{
           color: "text.main",
           fontWeight: "bold",

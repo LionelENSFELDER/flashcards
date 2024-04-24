@@ -10,12 +10,16 @@ import { getTheme } from "./theme/get-theme";
 import MaxCardsSelect from "./components/max-cards-select";
 import useAppStore from "./stores/app-store";
 import "./index.css";
+import { useMemo } from "react";
+import { DataCardType } from "./types";
 
 function App() {
   const { score, maxCards, currentTheme } = useAppStore();
-  const cards = getTheme(currentTheme)
-    .cards.sort(() => 0.5 - Math.random())
-    .slice(0, maxCards);
+  const theme = getTheme(currentTheme);
+  const cards: DataCardType[] = useMemo(
+    () => theme.cards.sort(() => 0.5 - Math.random()).slice(0, maxCards),
+    [maxCards, theme]
+  );
 
   return (
     <ThemeProvider theme={colorsDefault}>

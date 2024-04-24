@@ -78,14 +78,14 @@ const QuestionFormater = ({
 };
 
 const FlashCard = ({ mode, index, question, answer }: FlashCardType) => {
-  const { incScore } = useAppStore();
   const [answerHidden, setAnswerHidden] = useState<boolean>(true);
   const [isLearned, setIsLearned] = useState<StateEnum>(StateEnum.Unviewed);
-  const setYes = () => {
+  const { incrementScore } = useAppStore();
+  const isLearnedYes = () => {
     setIsLearned(StateEnum.Yes);
-    incScore();
+    incrementScore();
   };
-  const setNo = () => {
+  const isLearnedNo = () => {
     setIsLearned(StateEnum.No);
   };
   const isButtonDisable = (): boolean => {
@@ -141,7 +141,7 @@ const FlashCard = ({ mode, index, question, answer }: FlashCardType) => {
       <CardActions>
         <CardButton
           disabled={isButtonDisable()}
-          handleClick={setNo}
+          handleClick={isLearnedNo}
           startIcon={<ThumbDownIcon />}
           label={"None"}
           mt={1}
@@ -149,7 +149,7 @@ const FlashCard = ({ mode, index, question, answer }: FlashCardType) => {
 
         <CardButton
           disabled={isButtonDisable()}
-          handleClick={setYes}
+          handleClick={isLearnedYes}
           startIcon={<ThumbUpIcon />}
           label={"Get it !"}
           bgcolor="secondary.main"

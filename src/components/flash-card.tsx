@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Card, Chip, Badge } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -91,6 +91,10 @@ const FlashCard = ({ mode, index, question, answer }: FlashCardType) => {
   const isButtonDisable = (): boolean => {
     return isLearned !== StateEnum.Unviewed ? true : false;
   };
+
+  useEffect(() => {
+    setIsLearned(StateEnum.Unviewed);
+  }, [question, answer]);
 
   return (
     <Card
